@@ -1,37 +1,42 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Leitor de Texto Online - Text-to-Speech em Português | TTS Grátis</title>
 
-    <!-- Meta Tags Básicas -->
-    <meta name="description" content="Leitor de texto online gratuito. Converta qualquer texto em voz usando síntese de fala do navegador. Suporta português brasileiro (pt-BR) com controle de velocidade." />
-    <meta name="keywords" content="leitor de texto, text to speech, TTS, síntese de fala, leitor de voz, conversor texto voz, português brasileiro, pt-BR, leitor online, grátis" />
-    <meta name="author" content="Leitor de Texto" />
-    <meta name="robots" content="index, follow" />
-    <meta name="language" content="pt-BR" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leitor de Texto Online - Text-to-Speech em Português | TTS Grátis</title>
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://text-reader.carloshb.com.br" />
+  <!-- Meta Tags Básicas -->
+  <meta name="description"
+    content="Leitor de texto online gratuito. Converta qualquer texto em voz usando síntese de fala do navegador. Suporta português brasileiro (pt-BR) com controle de velocidade." />
+  <meta name="keywords"
+    content="leitor de texto, text to speech, TTS, síntese de fala, leitor de voz, conversor texto voz, português brasileiro, pt-BR, leitor online, grátis" />
+  <meta name="author" content="Leitor de Texto" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="pt-BR" />
 
-    <!-- Open Graph Tags -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Leitor de Texto Online - Text-to-Speech em Português | TTS Grátis" />
-    <meta property="og:description" content="Leitor de texto online gratuito. Converta qualquer texto em voz usando síntese de fala do navegador. Suporta português brasileiro (pt-BR) com controle de velocidade." />
-    <meta property="og:url" content="https://text-reader.carloshb.com.br" />
-    <meta property="og:image" content="https://exemplo.com/og-image.jpg" />
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="og:site_name" content="Leitor de Texto" />
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://text-reader.carloshb.com.br" />
 
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Leitor de Texto Online - Text-to-Speech em Português | TTS Grátis" />
-    <meta name="twitter:description" content="Leitor de texto online gratuito. Converta qualquer texto em voz usando síntese de fala do navegador. Suporta português brasileiro (pt-BR) com controle de velocidade." />
-    <meta name="twitter:image" content="https://exemplo.com/og-image.jpg" />
+  <!-- Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Leitor de Texto Online - Text-to-Speech em Português | TTS Grátis" />
+  <meta property="og:description"
+    content="Leitor de texto online gratuito. Converta qualquer texto em voz usando síntese de fala do navegador. Suporta português brasileiro (pt-BR) com controle de velocidade." />
+  <meta property="og:url" content="https://text-reader.carloshb.com.br" />
+  <meta property="og:image" content="https://text-reader.carloshb.com.br/img.png" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Leitor de Texto" />
 
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Leitor de Texto Online - Text-to-Speech em Português | TTS Grátis" />
+  <meta name="twitter:description"
+    content="Leitor de texto online gratuito. Converta qualquer texto em voz usando síntese de fala do navegador. Suporta português brasileiro (pt-BR) com controle de velocidade." />
+  <meta name="twitter:image" content="https://text-reader.carloshb.com.br/img.png" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
@@ -57,500 +62,538 @@
     }
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'gradient-start': '#2ecc71',
-              'gradient-end': '#3498db',
-              'text-primary': '#2c3e50',
-            }
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'gradient-start': '#2ecc71',
+            'gradient-end': '#3498db',
+            'text-primary': '#2c3e50',
           }
         }
       }
-    </script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JM3HGZJM04"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    }
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JM3HGZJM04"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-JM3HGZJM04');
-</script>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-N5CK6BH8');</script>
+    gtag('config', 'G-JM3HGZJM04');
+  </script>
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-N5CK6BH8');
+  </script>
   <!-- End Google Tag Manager -->
-    <style>
-      :root {
-        --color-primary: #2c3e50;
-        --color-border: rgba(255, 255, 255, 0.3);
-        --gradient-bg: linear-gradient(135deg, #2ecc71 0%, #3498db 100%);
-      }
+  <style>
+    :root {
+      --color-primary: #2c3e50;
+      --color-border: rgba(255, 255, 255, 0.3);
+      --gradient-bg: linear-gradient(135deg, #2ecc71 0%, #3498db 100%);
+    }
 
-      body {
-        background: var(--gradient-bg);
-      }
+    body {
+      background: var(--gradient-bg);
+    }
 
-      .btn-shine {
-        position: relative;
-        overflow: hidden;
-      }
+    .btn-shine {
+      position: relative;
+      overflow: hidden;
+    }
 
-      .btn-shine::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, var(--color-border), transparent);
-        transform: skewX(-25deg);
-        transition: left 0.5s ease;
-      }
+    .btn-shine::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+      transform: skewX(-25deg);
+      transition: left 0.5s ease;
+    }
 
-      .btn-shine:hover::before {
-        left: 100%;
-      }
+    .btn-shine:hover::before {
+      left: 100%;
+    }
 
-      .btn-shine > * {
-        position: relative;
-        z-index: 1;
-      }
+    .btn-shine>* {
+      position: relative;
+      z-index: 1;
+    }
 
-      input[type="range"] {
-        -webkit-appearance: none;
-        appearance: none;
-        background: var(--color-primary);
-        cursor: pointer;
-        width: 100%;
-        height: 8px;
-      }
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      background: var(--color-primary);
+      cursor: pointer;
+      width: 100%;
+      height: 8px;
+    }
 
-      input[type="range"]::-webkit-slider-track,
-      input[type="range"]::-moz-range-track {
-        background: var(--color-primary);
-        height: 8px;
-        border-radius: 4px;
-        border: 1px solid var(--color-border);
-      }
+    input[type="range"]::-webkit-slider-track,
+    input[type="range"]::-moz-range-track {
+      background: var(--color-primary);
+      height: 8px;
+      border-radius: 4px;
+      border: 1px solid var(--color-border);
+    }
 
-      input[type="range"]::-webkit-slider-thumb,
-      input[type="range"]::-moz-range-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        background: var(--color-primary);
-        height: 20px;
-        width: 20px;
-        border-radius: 50%;
-        border: 2px solid var(--color-border);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        transition: all 0.2s ease;
-        cursor: pointer;
-      }
+    input[type="range"]::-webkit-slider-thumb,
+    input[type="range"]::-moz-range-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      background: var(--color-primary);
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      border: 2px solid var(--color-border);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
 
-      input[type="range"]::-webkit-slider-thumb:hover,
-      input[type="range"]::-moz-range-thumb:hover {
-        transform: scale(1.1);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      }
+    input[type="range"]::-webkit-slider-thumb:hover,
+    input[type="range"]::-moz-range-thumb:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
 
-      textarea::placeholder {
-        color: var(--color-primary);
-        opacity: 0.6;
-      }
+    textarea::placeholder {
+      color: var(--color-primary);
+      opacity: 0.6;
+    }
 
-      button:disabled,
-      input:disabled,
-      textarea:disabled {
-        cursor: not-allowed !important;
-      }
-    </style>
-  </head>
-  <body class="min-h-screen antialiased flex items-center justify-center p-6 pb-24">
-    <main class="w-full max-w-2xl space-y-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl p-8">
-      <header class="space-y-2">
-        <h1 class="text-3xl font-bold tracking-tight drop-shadow-lg text-primary">Leitor de texto</h1>
-      </header>
+    button:disabled,
+    input:disabled,
+    textarea:disabled {
+      cursor: not-allowed !important;
+    }
+  </style>
+</head>
 
-      <div class="space-y-2">
-        <label for="text" class="block text-sm font-semibold text-primary">Texto</label>
-        <textarea
-          id="text"
-          class="w-full min-h-48 rounded-lg bg-white/20 backdrop-blur-md border border-white/30 p-4 outline-none ring-2 ring-transparent focus:ring-white/50 focus:border-white/50 resize-vertical transition-all duration-200 shadow-lg text-primary"
-          placeholder="Digite algo para o navegador ler em voz alta…"
-        >Coloque seu texto aqui, ou aperte play para ouvir essa instrução.</textarea>
-      </div>
+<body class="min-h-screen antialiased flex items-center justify-center p-6 pb-24">
+  <main
+    class="w-full max-w-2xl space-y-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl p-8">
+    <header class="space-y-2">
+      <h1 class="text-3xl font-bold tracking-tight drop-shadow-lg text-primary">Leitor de texto</h1>
+    </header>
 
-      <div class="w-full px-4 py-3 rounded-lg bg-white/30 backdrop-blur-sm border-2 border-white/50 shadow-xl flex items-center gap-3">
-        <button
-          id="btnPlay"
-          class="btn-shine inline-flex items-center justify-center px-4 py-3 rounded-lg bg-white/30 backdrop-blur-sm font-semibold border-2 border-white/50 shadow-xl hover:bg-white/40 hover:shadow-2xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-primary"
-        >
-          <i id="playIcon" data-lucide="play" class="w-5 h-5"></i>
-        </button>
-        <button
-          id="btnPause"
-          class="btn-shine inline-flex items-center justify-center px-4 py-3 rounded-lg bg-white/30 backdrop-blur-sm font-semibold border-2 border-white/50 shadow-xl hover:bg-white/40 hover:shadow-2xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-primary"
-          disabled
-        >
-          <i id="pauseIcon" data-lucide="pause" class="w-5 h-5"></i>
-        </button>
-        <button
-          id="btnSave"
-          class="btn-shine inline-flex items-center justify-center px-4 py-3 rounded-lg bg-white/20 backdrop-blur-sm font-semibold border border-white/30 shadow-lg hover:bg-white/30 hover:shadow-xl transition-all duration-200 text-primary disabled:opacity-50 disabled:cursor-not-allowed"
-          disabled
-        >
-          <i data-lucide="save" class="w-5 h-5"></i>
-        </button>
-        <div class="flex items-center gap-3 flex-1 min-w-0">
-          <span class="font-semibold text-sm whitespace-nowrap text-primary">0.5x</span>
-          <input
-            type="range"
-            id="rate"
-            min="0.5"
-            max="2.0"
-            step="0.1"
-            value="1.0"
-            class="flex-1 min-w-0"
-          />
-          <span class="font-semibold text-sm whitespace-nowrap text-primary">2x</span>
-          <span id="rateValue" class="font-bold text-sm whitespace-nowrap px-3 py-1 rounded-lg bg-white/50 backdrop-blur-md border border-white/40 text-primary">1.0x</span>
-        </div>
-      </div>
+    <div class="space-y-2">
+      <label for="text" class="block text-sm font-semibold text-primary">Texto</label>
+      <textarea id="text"
+        class="w-full min-h-48 rounded-lg bg-white/20 backdrop-blur-md border border-white/30 p-4 outline-none ring-2 ring-transparent focus:ring-white/50 focus:border-white/50 resize-vertical transition-all duration-200 shadow-lg text-primary"
+        placeholder="Digite algo para o navegador ler em voz alta…">Coloque seu texto aqui, ou aperte play para ouvir essa instrução.</textarea>
+    </div>
 
-      <p class="text-sm leading-relaxed text-primary">
-        Use o botão <span class="font-semibold">Reproduzir</span> para ouvir o texto.
-        <br class="sm:hidden" />
-        O botão <span class="font-semibold">Salvar</span> guarda o conteúdo de texto no navegador.
-      </p>
-
-      <footer class="text-xs text-primary">
-        Dica: tentamos selecionar automaticamente uma voz <span class="whitespace-nowrap">pt-BR</span> se existir no sistema.
-      </footer>
-    </main>
-
-    <div id="toast" class="fixed inset-x-0 top-4 flex justify-center pointer-events-none z-50"></div>
-
-    <!-- Modal de Doação -->
-    <div id="donationModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none opacity-0 transition-opacity duration-300">
-      <div class="fixed inset-0 bg-black/40 backdrop-blur-sm" onclick="closeDonationModal()"></div>
-      <div class="relative bg-white/75 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl p-8 max-w-md w-full pointer-events-auto transform scale-95 transition-transform duration-300">
-        <button
-          onclick="closeDonationModal()"
-          class="absolute top-4 right-4 text-primary hover:opacity-70 transition-opacity"
-        >
-          <i data-lucide="x" class="w-6 h-6"></i>
-        </button>
-        <div class="text-center space-y-4">
-          <div class="flex justify-center">
-            <i data-lucide="heart" class="w-12 h-12 text-primary"></i>
-          </div>
-          <div class="flex justify-center">
-            <div id="qrCodePlaceholder" class="w-48 h-48 bg-white/20 backdrop-blur-sm border-2 border-white/30 rounded-lg flex items-center justify-center p-3 overflow-hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="100%" height="100%" viewBox="0 0 329.000000 334.000000" preserveAspectRatio="xMidYMid meet" class="max-w-full max-h-full">
-
-                <g transform="translate(0.000000,334.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
-                <path d="M0 1670 l0 -1670 1645 0 1645 0 0 1670 0 1670 -1645 0 -1645 0 0 -1670z m580 1260 l0 -210 -210 0 -210 0 0 210 0 210 210 0 210 0 0 -210z m240 180 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m420 -30 l0 -60 30 0 c27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 l0 -30 60 0 60 0 0 60 0 60 150 0 150 0 0 -29 c0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -28 -3 -28 57 -28 l61 0 0 -60 0 -60 30 0 c27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 90 0 90 -30 0 c-27 0 -30 3 -30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 l0 30 90 0 90 0 0 -29 c0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -28 -3 -28 57 -28 l61 0 0 -60 0 -60 30 0 30 0 0 90 0 90 -30 0 c-27 0 -30 3 -30 30 l0 30 180 0 180 0 0 -30 0 -30 60 0 60 0 0 30 c0 27 3 30 30 30 l30 0 0 -89 0 -90 -27 -3 c-22 -2 -29 -9 -31 -30 -3 -24 -8 -28 -33 -28 -29 0 -29 0 -29 60 l0 60 -60 0 -60 0 0 30 0 31 -87 -3 c-88 -3 -88 -3 -91 -30 -3 -28 -3 -28 57 -28 l61 0 0 -59 c0 -58 -1 -60 -27 -63 l-28 -3 -3 -117 -3 -118 61 0 60 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 l0 30 60 0 60 0 0 -60 0 -60 -30 0 -30 0 0 -149 0 -150 -27 -3 c-28 -3 -28 -3 -31 -90 l-3 -88 -29 0 c-27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 -120 0 -120 -60 0 -60 0 0 90 0 90 -30 0 -30 0 0 60 0 60 -30 0 -30 0 0 -120 0 -120 30 0 c27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -26 -3 -28 -6 -31 -60 -3 -53 -5 -57 -30 -60 -25 -3 -27 -6 -30 -60 l-3 -58 31 0 30 0 0 -59 c0 -58 -1 -60 -27 -63 -22 -2 -29 -9 -31 -30 -3 -28 -3 -28 57 -28 l61 0 0 -30 c0 -27 3 -30 30 -30 l30 0 0 90 0 90 -30 0 -30 0 0 60 0 60 60 0 60 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 l0 30 150 0 150 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 60 0 60 -30 0 c-27 0 -30 3 -30 30 l0 30 60 0 60 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -28 -3 -28 -3 -31 -90 l-3 -88 -29 0 -30 0 0 150 0 150 -60 0 -60 0 0 30 0 30 60 0 60 0 0 -30 c0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 l0 30 -60 0 -60 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 l30 0 0 60 0 60 30 0 30 0 0 -60 0 -60 60 0 60 0 0 -30 c0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 l31 0 0 -90 0 -90 -30 0 c-27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 l30 0 0 -210 0 -210 -30 0 c-27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 l30 0 0 -120 0 -120 -30 0 c-27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 l30 0 0 -60 0 -60 -30 0 c-27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 l30 0 0 -89 0 -90 -27 -3 c-27 -3 -28 -6 -31 -60 l-3 -58 31 0 30 0 0 -60 0 -60 -30 0 -30 0 0 60 0 60 -30 0 -30 0 0 120 0 120 30 0 c27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 l30 0 0 60 0 60 -30 0 c-27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 -3 30 -30 30 l-30 0 0 61 c0 60 0 60 -27 57 -22 -2 -29 -9 -31 -30 -3 -24 -8 -28 -33 -28 -26 0 -29 -3 -29 -30 l0 -30 -90 0 -90 0 0 120 0 120 -60 0 -60 0 0 -89 0 -90 -27 -3 c-22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 28 0 31 -3 31 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 l0 30 150 0 150 0 0 -30 c0 -28 -1 -29 -57 -32 -55 -3 -58 -4 -61 -30 -3 -25 0 -28 27 -28 l31 0 0 -60 0 -60 30 0 30 0 0 60 0 60 30 0 30 0 0 -60 0 -60 -30 0 c-27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 l30 0 0 -90 0 -90 -30 0 c-27 0 -30 -3 -30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -31 -3 -24 0 -27 27 -27 l31 0 0 -90 0 -90 30 0 30 0 0 -60 0 -60 30 0 30 0 0 -60 0 -60 30 0 c27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 l0 -30 -60 0 -60 0 0 60 0 60 -90 0 -90 0 0 60 0 61 -57 -3 c-55 -3 -58 -5 -61 -30 -3 -21 -9 -27 -30 -30 -21 -2 -28 -9 -30 -31 -3 -24 0 -27 27 -27 28 0 31 -3 31 -30 0 -28 -1 -29 -57 -32 -55 -3 -58 -4 -61 -30 -3 -24 -8 -28 -33 -28 -29 0 -29 0 -29 60 l0 60 -30 0 -30 0 0 -60 0 -60 -120 0 -120 0 0 30 c0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30 l0 -30 -60 0 -60 0 0 30 0 30 60 0 60 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 3 -30 30 l0 30 90 0 90 0 0 30 0 31 -147 -3 -148 -3 -3 -57 c-3 -53 -5 -57 -30 -60 -21 -2 -28 -9 -30 -30 -3 -25 0 -28 27 -28 28 0 31 -3 31 -30 l0 -30 -60 0 -60 0 0 -30 c0 -27 3 -30 30 -30 l30 0 0 -90 0 -90 -30 0 -30 0 0 60 0 60 -30 0 c-27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 l30 0 0 61 c0 60 0 60 -27 57 -22 -2 -29 -9 -31 -30 -3 -24 -8 -28 -33 -28 -26 0 -29 3 -29 30 0 27 -3 30 -30 30 l-30 0 0 60 0 60 60 0 60 0 0 30 c0 27 3 30 30 30 27 0 30 3 30 30 l0 31 -57 -3 c-55 -3 -58 -5 -61 -30 -3 -25 -7 -27 -60 -30 l-57 -3 -3 -87 -3 -87 -57 -3 -57 -3 -3 -57 -3 -58 31 0 c27 0 30 3 30 30 l0 30 60 0 60 0 0 -60 0 -60 30 0 c27 0 30 -3 30 -30 l0 -30 -90 0 -90 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -21 -9 -27 -30 -30 -21 -2 -28 -9 -30 -30 -3 -24 -8 -28 -33 -28 -26 0 -29 3 -29 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -27 -3 -28 -6 -31 -60 l-3 -58 -59 0 c-60 0 -60 0 -60 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -27 -3 -28 -6 -31 -60 l-3 -58 -89 0 -90 0 0 30 c0 27 3 30 30 30 l30 0 0 60 0 60 -30 0 c-27 0 -30 -3 -30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -31 -3 -23 -8 -27 -33 -27 -26 0 -29 -3 -29 -30 l0 -30 -90 0 -90 0 0 90 0 90 30 0 c27 0 30 3 30 30 0 27 -3 30 -30 30 l-30 0 0 120 0 120 -60 0 -60 0 0 30 c0 27 3 30 30 30 27 0 30 3 30 30 l0 30 -60 0 -60 0 0 30 0 30 -60 0 -60 0 0 60 0 60 30 0 c27 0 30 3 30 30 0 27 -3 30 -30 30 l-30 0 0 60 0 60 30 0 c27 0 30 3 30 30 l0 30 -60 0 -60 0 0 -59 c0 -58 -1 -60 -27 -63 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 l31 0 0 -59 c0 -58 -1 -60 -27 -63 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 28 0 31 -3 31 -30 l0 -30 60 0 c60 0 60 0 60 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 l-3 -28 -90 0 -89 0 0 30 c0 27 3 30 30 30 l30 0 0 60 0 60 -30 0 -30 0 0 210 0 210 30 0 c27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 60 0 60 -30 0 c-27 0 -30 3 -30 30 l0 30 60 0 60 0 0 -60 0 -60 30 0 c27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 60 0 61 -87 -3 -88 -3 -3 -57 c-3 -57 -4 -58 -32 -58 -27 0 -30 3 -30 30 l0 30 -90 0 -90 0 0 90 0 90 -30 0 -30 0 0 120 0 120 60 0 60 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 l0 30 -120 0 -120 0 0 60 0 60 -30 0 c-27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 l30 0 0 60 0 60 30 0 c27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 l0 30 -60 0 -60 0 0 30 0 30 90 0 90 0 0 -60 0 -60 60 0 60 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 3 -30 30 l0 30 120 0 120 0 0 60 0 60 30 0 c27 0 30 3 30 30 l0 30 60 0 60 0 0 -60 0 -60 -30 0 -30 0 0 -60 0 -60 30 0 c27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 l0 -29 -87 -3 c-88 -3 -88 -3 -91 -30 l-3 -28 90 0 91 0 0 -30 0 -29 -87 -3 c-88 -3 -88 -3 -91 -30 -3 -24 -8 -28 -33 -28 -25 0 -29 -4 -29 -30 0 -28 -1 -29 -57 -32 -55 -3 -58 -4 -61 -30 -3 -25 0 -28 27 -28 28 0 31 -3 31 -30 l0 -30 90 0 90 0 0 90 0 90 60 0 60 0 0 -60 0 -60 30 0 c27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -24 -8 -28 -33 -28 -29 0 -29 0 -29 -60 l0 -60 30 0 c27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 l30 0 0 -90 0 -90 30 0 30 0 0 60 0 60 60 0 60 0 0 30 0 30 60 0 60 0 0 30 c0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 l0 -30 60 0 60 0 0 30 c0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 l-30 0 0 60 0 60 -30 0 c-27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 l-30 0 0 150 0 150 -30 0 c-27 0 -30 -3 -30 -29 0 -25 -4 -30 -27 -33 -28 -3 -28 -3 -31 -90 l-3 -88 31 0 c27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 l30 0 0 -60 0 -60 -30 0 -30 0 0 60 0 60 -30 0 c-27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 l-30 0 0 90 0 90 30 0 c27 0 30 3 30 30 l0 30 -60 0 -60 0 0 120 0 120 -30 0 -30 0 0 60 0 60 30 0 c27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 60 0 60 -60 0 -60 0 0 90 0 90 30 0 30 0 0 120 0 120 -30 0 c-27 0 -30 3 -30 30 l0 30 180 0 180 0 0 -60z m1860 -150 l0 -210 -210 0 -210 0 0 210 0 210 210 0 210 0 0 -210z m-2220 30 l0 -60 -30 0 c-27 0 -30 3 -30 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -24 -8 -28 -33 -28 -26 0 -29 3 -29 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 l0 30 120 0 120 0 0 -60z m1680 -630 c0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m60 -300 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m0 -120 l0 -30 -60 0 -60 0 0 30 0 30 60 0 60 0 0 -30z m420 -1200 c0 -27 3 -30 30 -30 l30 0 0 -120 0 -120 -30 0 c-27 0 -30 3 -30 30 0 27 -3 30 -30 30 l-30 0 0 120 0 120 30 0 c27 0 30 -3 30 -30z m-2460 -300 l0 -210 -210 0 -210 0 0 210 0 210 210 0 210 0 0 -210z m2340 -180 l0 -30 -90 0 -90 0 0 30 0 30 90 0 90 0 0 -30z"/>
-                <path d="M220 2930 l0 -150 150 0 150 0 0 150 0 150 -150 0 -150 0 0 -150z m240 0 l0 -90 -90 0 -90 0 0 90 0 90 90 0 90 0 0 -90z"/>
-                <path d="M1007 3073 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 28 0 31 3 31 30 0 27 3 30 30 30 l30 0 0 -60 0 -60 30 0 30 0 0 -120 0 -120 -30 0 -30 0 0 90 0 90 -30 0 c-27 0 -30 3 -30 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -21 -9 -27 -30 -30 -21 -2 -28 -9 -30 -30 -3 -25 0 -28 27 -28 28 0 31 3 31 30 0 27 3 30 30 30 l30 0 0 -120 0 -120 -30 0 c-27 0 -30 -3 -30 -30 l0 -30 60 0 60 0 0 -30 c0 -27 3 -30 30 -30 l30 0 0 60 0 60 30 0 c27 0 30 -3 30 -30 l0 -30 60 0 60 0 0 -30 c0 -27 3 -30 30 -30 27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 28 0 31 3 31 30 0 27 3 30 30 30 27 0 30 -3 30 -30 l0 -30 90 0 90 0 0 -29 c0 -25 -4 -30 -27 -33 -27 -3 -28 -6 -31 -60 l-3 -58 31 0 c27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 l31 0 0 -60 0 -60 -60 0 -60 0 0 120 0 120 -60 0 -60 0 0 61 c0 60 0 60 -27 57 -28 -3 -28 -3 -31 -90 -3 -86 -3 -87 -30 -90 -21 -2 -28 -9 -30 -30 -3 -25 0 -28 27 -28 28 0 31 -3 31 -30 0 -27 3 -30 30 -30 l30 0 0 -60 0 -60 30 0 c27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 l0 -30 60 0 60 0 0 30 c0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 -90 0 -90 30 0 30 0 0 60 0 60 30 0 c27 0 30 -3 30 -30 l0 -30 60 0 c60 0 60 0 60 -30 0 -28 -1 -29 -57 -32 -55 -3 -58 -4 -61 -30 -3 -28 -3 -28 57 -28 61 0 61 0 61 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -21 -9 -27 -30 -30 -27 -3 -27 -4 -30 -90 l-3 -88 31 0 30 0 0 -60 0 -60 -60 0 -60 0 0 90 0 90 -30 0 c-27 0 -30 3 -30 30 0 27 3 30 30 30 l30 0 0 61 c0 60 0 60 -27 57 -27 -3 -28 -6 -31 -60 l-3 -57 -87 -3 c-87 -3 -87 -3 -90 -30 l-3 -28 90 0 91 0 0 -90 0 -90 -60 0 -60 0 0 61 c0 60 0 60 -27 57 -22 -2 -29 -9 -31 -30 -3 -21 -9 -27 -30 -30 l-27 -3 -3 -117 -3 -118 -59 0 c-60 0 -60 0 -60 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -28 -3 -28 -3 -31 -90 -3 -86 -3 -87 -30 -90 -21 -2 -28 -9 -30 -31 -3 -23 -8 -27 -33 -27 l-29 0 0 150 0 150 30 0 30 0 0 61 c0 60 0 60 -27 57 -27 -3 -28 -6 -31 -60 -3 -57 -4 -58 -32 -58 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 28 0 31 -3 31 -29 0 -25 -4 -30 -27 -33 -28 -3 -28 -3 -31 -90 l-3 -88 31 0 c27 0 30 -3 30 -30 l0 -30 -90 0 -90 0 0 90 0 90 -30 0 c-27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 l30 0 0 61 c0 60 0 60 -27 57 -26 -3 -28 -6 -31 -60 -3 -53 -5 -57 -30 -60 -21 -2 -28 -9 -30 -30 -3 -21 -9 -27 -30 -30 -21 -2 -28 -9 -30 -30 -3 -25 -7 -27 -60 -30 -54 -3 -57 -5 -60 -30 -3 -25 -7 -27 -60 -30 l-57 -3 -3 -57 -3 -58 -59 0 c-60 0 -60 0 -60 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 l0 30 60 0 60 0 0 30 0 30 -60 0 -60 0 0 -30 c0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 l0 -30 60 0 60 0 0 30 c0 27 3 30 30 30 l30 0 0 -60 0 -60 30 0 c27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -31 -3 -24 0 -27 27 -27 28 0 31 -3 31 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -28 -3 -28 57 -28 61 0 61 0 61 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -21 -9 -27 -30 -30 -25 -3 -27 -6 -30 -61 l-3 -57 31 0 c27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 60 0 60 -30 0 c-27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 l0 30 60 0 60 0 0 60 0 60 90 0 90 0 0 -60 0 -60 -30 0 c-27 0 -30 3 -30 31 0 27 -3 30 -27 27 -27 -3 -28 -6 -31 -60 l-3 -58 31 0 c27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -27 -3 -28 -6 -31 -60 l-3 -58 31 0 30 0 0 60 0 60 60 0 60 0 0 60 0 60 30 0 c27 0 30 -3 30 -30 l0 -30 60 0 60 0 0 -30 0 -30 60 0 60 0 0 90 0 90 -30 0 c-27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 -3 30 -30 30 l-30 0 0 60 0 60 30 0 c27 0 30 -3 30 -30 l0 -30 60 0 60 0 0 -90 0 -90 30 0 c27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 60 0 60 30 0 c27 0 30 -3 30 -30 l0 -30 60 0 60 0 0 -30 0 -30 60 0 60 0 0 -30 c0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 90 0 90 30 0 c27 0 30 3 30 30 0 27 -3 30 -30 30 l-30 0 0 90 0 90 30 0 c27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 -3 30 -30 30 l-30 0 0 60 0 60 60 0 60 0 0 30 c0 27 3 30 30 30 l30 0 0 -90 0 -90 30 0 c27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -28 -3 -28 -3 -31 -90 l-3 -88 31 0 c27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 60 0 60 60 0 60 0 0 -30 c0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -27 -5 -28 -63 -28 -59 0 -59 0 -59 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 l0 30 60 0 60 0 0 61 c0 60 0 60 -27 57 -22 -2 -29 -9 -31 -31 -3 -26 -5 -27 -63 -27 -59 0 -59 0 -59 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 l31 0 0 -60 0 -60 -30 0 c-27 0 -30 3 -30 30 0 27 -3 30 -30 30 l-30 0 0 60 0 60 -30 0 c-27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -28 -3 -28 -3 -31 -90 -3 -86 -3 -87 -30 -90 -21 -2 -28 -9 -30 -30 -3 -24 -8 -28 -33 -28 -29 0 -29 0 -29 60 l0 60 30 0 30 0 0 60 0 60 -90 0 -90 0 0 30 c0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 l-30 0 0 60 0 60 -30 0 -30 0 0 60 0 60 30 0 c27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 -3 30 -30 30 l-30 0 0 90 0 90 30 0 c27 0 30 3 30 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -24 -8 -28 -33 -28 -26 0 -29 3 -29 30 0 27 -3 30 -30 30 l-30 0 0 60 0 60 30 0 c27 0 30 -3 30 -30 l0 -30 90 0 90 0 0 30 0 30 60 0 60 0 0 150 0 150 30 0 c27 0 30 3 30 30 l0 30 -90 0 -90 0 0 150 0 150 -30 0 c-27 0 -30 -3 -30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -21 -9 -27 -30 -30 -21 -2 -28 -9 -30 -30 -3 -24 -8 -28 -33 -28 -26 0 -29 3 -29 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 l31 0 0 -60 0 -60 -60 0 -60 0 0 121 0 120 -27 -3 -28 -3 -3 -117 -3 -117 -117 -3 -117 -3 -3 -57 c-3 -57 -4 -58 -32 -58 -27 0 -30 3 -30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 l0 30 -60 0 -60 0 0 60 0 60 -30 0 c-27 0 -30 3 -30 30 l0 30 -60 0 -60 0 0 60 0 60 -30 0 c-27 0 -30 3 -30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z m293 -323 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m840 -90 l0 -120 -60 0 -60 0 0 -30 0 -30 90 0 90 0 0 30 c0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -27 -3 -28 -6 -31 -60 l-3 -58 -59 0 c-60 0 -60 0 -60 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -26 -3 -28 -6 -31 -60 -3 -53 -5 -57 -30 -60 -27 -3 -27 -4 -30 -90 l-3 -88 31 0 c27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -27 -3 -28 -6 -31 -60 l-3 -58 31 0 c27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 l-30 0 0 -60 0 -60 -30 0 -30 0 0 60 0 60 -90 0 -90 0 0 30 c0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 l30 0 0 150 0 150 -30 0 c-27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 l-30 0 0 -60 0 -60 -30 0 -30 0 0 60 0 60 30 0 c27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 -60 0 -60 30 0 30 0 0 60 0 60 30 0 30 0 0 90 0 90 30 0 c27 0 30 3 30 30 0 27 3 30 30 30 l30 0 0 -120z m-780 -60 l0 -60 30 0 c27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 l0 30 -60 0 -60 0 0 60 0 60 60 0 60 0 0 -60z m300 -150 l0 -90 -30 0 -30 0 0 90 0 90 30 0 30 0 0 -90z m-240 -420 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m660 -720 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m-1140 -149 c0 -58 -1 -60 -27 -63 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 l31 0 0 -90 0 -90 60 0 60 0 0 -30 0 -30 -60 0 -60 0 0 -30 c0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 l-30 0 0 90 0 90 -30 0 c-27 0 -30 3 -30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 l0 30 60 0 60 0 0 30 c0 27 3 30 30 30 30 0 30 0 30 -59z m-420 -31 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m900 -60 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m240 0 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m120 -60 l0 -90 -30 0 -30 0 0 90 0 90 30 0 30 0 0 -90z m540 60 c0 -27 3 -30 30 -30 l30 0 0 -60 0 -60 -30 0 c-27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 l30 0 0 60 0 60 -30 0 c-27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m-420 -90 l0 -60 30 0 30 0 0 -60 0 -60 -30 0 -30 0 0 60 0 60 -30 0 -30 0 0 60 0 60 30 0 30 0 0 -60z m600 30 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m120 0 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m-1800 -60 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m240 0 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m120 -30 l0 -60 -30 0 -30 0 0 60 0 60 30 0 30 0 0 -60z m120 30 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m360 -30 l0 -60 -30 0 -30 0 0 60 0 60 30 0 30 0 0 -60z m900 -30 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m-1740 -60 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m360 -60 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m240 0 c0 -27 -3 -30 -30 -30 l-30 0 0 -60 0 -60 30 0 c27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 l0 30 -60 0 -60 0 0 60 0 60 60 0 60 0 0 30 c0 27 3 30 30 30 27 0 30 -3 30 -30z"/>
-                <path d="M1780 2390 c0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30z"/>
-                <path d="M1607 3073 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 28 0 31 3 31 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z"/>
-                <path d="M1300 2991 c0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 28 0 31 3 31 30 0 27 3 30 30 30 l30 0 0 -60 0 -60 30 0 30 0 0 -60 0 -60 30 0 30 0 0 60 0 60 -30 0 -30 0 0 60 0 60 -30 0 c-27 0 -30 3 -30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -29z"/>
-                <path d="M1480 2990 c0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30z"/>
-                <path d="M1547 2833 c-4 -3 -7 -44 -7 -90 l0 -83 90 0 90 0 0 90 0 90 -83 0 c-46 0 -87 -3 -90 -7z m113 -83 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z"/>
-                <path d="M700 2750 c0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30z"/>
-                <path d="M2380 2750 c0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30z"/>
-                <path d="M527 2593 c-4 -3 -7 -17 -7 -30 0 -19 -5 -23 -30 -23 -27 0 -30 -3 -30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 l-3 -28 90 0 91 0 0 -30 c0 -28 -1 -29 -57 -32 -55 -3 -58 -4 -61 -30 -3 -24 -8 -28 -33 -28 -26 0 -29 3 -29 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -27 -5 -28 -63 -28 -59 0 -59 0 -59 -30 l0 -30 90 0 90 0 0 -30 0 -30 120 0 120 0 0 30 0 30 -60 0 -60 0 0 30 c0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 l30 0 0 90 0 90 60 0 60 0 0 30 0 30 -113 0 c-63 0 -117 -3 -120 -7z m53 -83 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z"/>
-                <path d="M2920 2570 c0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 l30 0 0 -60 0 -60 30 0 30 0 0 -60 0 -60 -30 0 c-27 0 -30 3 -30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 -3 30 -30 30 l-30 0 0 90 0 90 -30 0 c-27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 -90 0 -90 30 0 c27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 l30 0 0 -60 0 -60 -60 0 -60 0 0 -30 0 -30 90 0 90 0 0 -30 c0 -28 -1 -29 -57 -32 l-58 -3 -3 -57 -3 -58 31 0 c27 0 30 -3 30 -30 l0 -30 60 0 60 0 0 60 0 60 -30 0 c-27 0 -30 3 -30 30 0 27 3 30 30 30 l30 0 0 150 0 150 -30 0 c-27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 l30 0 0 90 0 90 -30 0 -30 0 0 90 0 90 -30 0 c-27 0 -30 -3 -30 -30z m60 -540 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z"/>
-                <path d="M707 2473 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z"/>
-                <path d="M1007 2413 c-4 -3 -7 -30 -7 -60 0 -52 0 -53 30 -53 l30 0 0 60 c0 56 -1 60 -23 60 -13 0 -27 -3 -30 -7z"/>
-                <path d="M1247 2413 c-4 -3 -7 -30 -7 -60 0 -52 0 -53 30 -53 l30 0 0 60 c0 56 -1 60 -23 60 -13 0 -27 -3 -30 -7z"/>
-                <path d="M1127 2353 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z"/>
-                <path d="M1487 2233 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z"/>
-                <path d="M2327 2113 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z"/>
-                <path d="M1067 2053 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z"/>
-                <path d="M340 1910 c0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30z"/>
-                <path d="M580 1910 c0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30z"/>
-                <path d="M820 1850 c0 -28 -1 -29 -57 -32 l-58 -3 -3 -87 -3 -88 31 0 c27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -27 -3 -28 -6 -31 -60 l-3 -58 31 0 c27 0 30 -3 30 -30 l0 -30 -60 0 -60 0 0 -30 0 -30 60 0 60 0 0 -30 c0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 l30 0 0 61 c0 60 0 60 -27 57 -27 -3 -28 -6 -31 -60 -3 -57 -4 -58 -32 -58 -30 0 -30 0 -30 60 l0 60 -30 0 c-27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 l0 30 -60 0 -60 0 0 30 c0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30z"/>
-                <path d="M227 1813 c-4 -3 -7 -30 -7 -60 0 -52 0 -53 30 -53 27 0 30 -3 30 -30 l0 -30 60 0 60 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 l0 30 -83 0 c-46 0 -87 -3 -90 -7z"/>
-                <path d="M467 1753 c-4 -3 -7 -44 -7 -90 l0 -83 90 0 90 0 0 90 0 90 -83 0 c-46 0 -87 -3 -90 -7z m113 -83 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z"/>
-                <path d="M1547 1753 c-4 -3 -7 -44 -7 -90 l0 -83 90 0 90 0 0 90 0 90 -83 0 c-46 0 -87 -3 -90 -7z m113 -83 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z"/>
-                <path d="M2440 1730 c0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 28 0 31 3 31 30 0 27 3 30 30 30 27 0 30 3 30 30 l0 30 60 0 60 0 0 30 0 30 -60 0 -60 0 0 -30z"/>
-                <path d="M2627 1753 c-4 -3 -7 -44 -7 -90 l0 -83 90 0 90 0 0 90 0 90 -83 0 c-46 0 -87 -3 -90 -7z m113 -83 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z"/>
-                <path d="M1120 1640 l0 -60 -60 0 -60 0 0 -30 0 -30 60 0 60 0 0 30 0 30 60 0 60 0 0 -30 0 -30 60 0 60 0 0 -30 c0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 l0 -30 120 0 120 0 0 30 0 30 -120 0 -120 0 0 60 0 60 -30 0 c-27 0 -30 3 -30 30 0 27 -3 30 -30 30 l-30 0 0 -60 0 -60 -60 0 -60 0 0 60 0 60 -60 0 -60 0 0 -60z m300 -90 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z"/>
-                <path d="M347 1573 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z"/>
-                <path d="M2687 1513 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z"/>
-                <path d="M2927 1513 c-4 -3 -7 -30 -7 -60 0 -52 0 -53 30 -53 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 30 -1 30 -53 30 -30 0 -57 -3 -60 -7z"/>
-                <path d="M1367 1393 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z"/>
-                <path d="M1487 1393 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z"/>
-                <path d="M400 950 c0 -27 3 -30 30 -30 27 0 30 -3 30 -30 l0 -30 90 0 90 0 0 30 0 30 -90 0 -90 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30z"/>
-                <path d="M2807 973 c-4 -3 -7 -17 -7 -29 0 -17 -7 -23 -27 -26 -22 -2 -29 -9 -31 -30 -3 -28 -3 -28 57 -28 l61 0 0 60 c0 56 -1 60 -23 60 -13 0 -27 -3 -30 -7z"/>
-                <path d="M2507 733 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z"/>
-                <path d="M1547 673 c-4 -3 -7 -44 -7 -90 l0 -83 90 0 90 0 0 90 0 90 -83 0 c-46 0 -87 -3 -90 -7z m113 -83 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z"/>
-                <path d="M2627 673 c-4 -3 -7 -44 -7 -90 l0 -83 90 0 90 0 0 90 0 90 -83 0 c-46 0 -87 -3 -90 -7z m113 -83 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z"/>
-                <path d="M887 553 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z"/>
-                <path d="M2447 553 c-4 -3 -7 -17 -7 -30 0 -22 4 -23 60 -23 l60 0 0 30 c0 30 -1 30 -53 30 -30 0 -57 -3 -60 -7z"/>
-                <path d="M1247 493 c-4 -3 -7 -30 -7 -60 0 -52 0 -53 -30 -53 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 28 0 31 -3 31 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 120 c0 119 0 120 -23 120 -13 0 -27 -3 -30 -7z"/>
-                <path d="M887 433 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z"/>
-                <path d="M1367 433 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -24 -8 -28 -33 -28 -26 0 -29 3 -29 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z"/>
-                <path d="M707 313 c-4 -3 -7 -17 -7 -30 0 -22 4 -23 60 -23 l60 0 0 30 c0 30 -1 30 -53 30 -30 0 -57 -3 -60 -7z"/>
-                <path d="M1720 290 c0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30z"/>
-                <path d="M2740 2930 l0 -150 150 0 150 0 0 150 0 150 -150 0 -150 0 0 -150z m240 0 l0 -90 -90 0 -90 0 0 90 0 90 90 0 90 0 0 -90z"/>
-                <path d="M220 410 l0 -150 150 0 150 0 0 150 0 150 -150 0 -150 0 0 -150z m240 0 l0 -90 -90 0 -90 0 0 90 0 90 90 0 90 0 0 -90z"/>
-                </g>
-                </svg>
-              <!-- <span class="text-primary opacity-60 text-sm">QR Code</span> -->
-            </div>
-          </div>
-          <h2 class="text-2xl font-bold text-primary">Gostou do Leitor de Texto?</h2>
-          <p class="text-sm text-primary opacity-90">
-            Se este projeto foi útil para você, considere fazer uma doação para apoiar o desenvolvimento contínuo.
-          </p>
-          <div class="flex justify-center pt-2">
-            <button
-              onclick="closeDonationModal()"
-              class="btn-shine inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-white/20 backdrop-blur-sm font-semibold border border-white/30 shadow-lg hover:bg-white/30 hover:shadow-xl transition-all duration-200 text-primary"
-            >
-              Talvez Depois
-            </button>
-          </div>
-        </div>
+    <div
+      class="w-full px-4 py-3 rounded-lg bg-white/30 backdrop-blur-sm border-2 border-white/50 shadow-xl flex items-center gap-3">
+      <button id="btnPlay"
+        class="btn-shine inline-flex items-center justify-center px-4 py-3 rounded-lg bg-white/30 backdrop-blur-sm font-semibold border-2 border-white/50 shadow-xl hover:bg-white/40 hover:shadow-2xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-primary">
+        <i id="playIcon" data-lucide="play" class="w-5 h-5"></i>
+      </button>
+      <button id="btnPause"
+        class="btn-shine inline-flex items-center justify-center px-4 py-3 rounded-lg bg-white/30 backdrop-blur-sm font-semibold border-2 border-white/50 shadow-xl hover:bg-white/40 hover:shadow-2xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-primary"
+        disabled>
+        <i id="pauseIcon" data-lucide="pause" class="w-5 h-5"></i>
+      </button>
+      <button id="btnSave"
+        class="btn-shine inline-flex items-center justify-center px-4 py-3 rounded-lg bg-white/20 backdrop-blur-sm font-semibold border border-white/30 shadow-lg hover:bg-white/30 hover:shadow-xl transition-all duration-200 text-primary disabled:opacity-50 disabled:cursor-not-allowed"
+        disabled>
+        <i data-lucide="save" class="w-5 h-5"></i>
+      </button>
+      <div class="flex items-center gap-3 flex-1 min-w-0">
+        <span class="font-semibold text-sm whitespace-nowrap text-primary">0.5x</span>
+        <input type="range" id="rate" min="0.5" max="2.0" step="0.1" value="1.0" class="flex-1 min-w-0" />
+        <span class="font-semibold text-sm whitespace-nowrap text-primary">2x</span>
+        <span id="rateValue"
+          class="font-bold text-sm whitespace-nowrap px-3 py-1 rounded-lg bg-white/50 backdrop-blur-md border border-white/40 text-primary">1.0x</span>
       </div>
     </div>
 
-    <footer class="fixed bottom-0 left-0 right-0 z-40 flex justify-center p-4">
-      <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-2xl px-6 py-4 max-w-2xl w-full">
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
-          <div class="text-xs text-primary">
-            <p class="inline-flex items-center gap-1">
-              <i data-lucide="copyright" class="w-4 h-4 inline-block"></i>
-              2025 Leitor de texto. Todos os direitos reservados.
-            </p>
-          </div>
-          <div class="text-xs text-primary">
-            <p class="inline-flex items-center gap-1">
-              Gostou? Considere
-              <a id="donationLink" href="#" class="font-semibold hover:opacity-80 underline transition-colors duration-200 text-primary cursor-pointer">apoiar o projeto</a>
-              <i data-lucide="heart" class="w-4 h-4 inline-block"></i>
-            </p>
+    <p class="text-sm leading-relaxed text-primary">
+      Use o botão <span class="font-semibold">Reproduzir</span> para ouvir o texto.
+      <br class="sm:hidden" />
+      O botão <span class="font-semibold">Salvar</span> guarda o conteúdo de texto no navegador.
+    </p>
+
+    <footer class="text-xs text-primary">
+      Dica: tentamos selecionar automaticamente uma voz <span class="whitespace-nowrap">pt-BR</span> se existir no
+      sistema.
+    </footer>
+  </main>
+
+  <div id="toast" class="fixed inset-x-0 top-4 flex justify-center pointer-events-none z-50"></div>
+
+  <!-- Modal de Doação -->
+  <div id="donationModal"
+    class="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none opacity-0 transition-opacity duration-300">
+    <div class="fixed inset-0 bg-black/40 backdrop-blur-sm" onclick="closeDonationModal()"></div>
+    <div
+      class="relative bg-white/75 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl p-8 max-w-md w-full pointer-events-auto transform scale-95 transition-transform duration-300">
+      <button onclick="closeDonationModal()"
+        class="absolute top-4 right-4 text-primary hover:opacity-70 transition-opacity">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+      <div class="text-center space-y-4">
+        <div class="flex justify-center">
+          <i data-lucide="heart" class="w-12 h-12 text-primary"></i>
+        </div>
+        <div class="flex justify-center">
+          <div id="qrCodePlaceholder"
+            class="w-48 h-48 bg-white/20 backdrop-blur-sm border-2 border-white/30 rounded-lg flex items-center justify-center p-3 overflow-hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="100%" height="100%"
+              viewBox="0 0 329.000000 334.000000" preserveAspectRatio="xMidYMid meet" class="max-w-full max-h-full">
+
+              <g transform="translate(0.000000,334.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                <path
+                  d="M0 1670 l0 -1670 1645 0 1645 0 0 1670 0 1670 -1645 0 -1645 0 0 -1670z m580 1260 l0 -210 -210 0 -210 0 0 210 0 210 210 0 210 0 0 -210z m240 180 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m420 -30 l0 -60 30 0 c27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 l0 -30 60 0 60 0 0 60 0 60 150 0 150 0 0 -29 c0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -28 -3 -28 57 -28 l61 0 0 -60 0 -60 30 0 c27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 90 0 90 -30 0 c-27 0 -30 3 -30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 l0 30 90 0 90 0 0 -29 c0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -28 -3 -28 57 -28 l61 0 0 -60 0 -60 30 0 30 0 0 90 0 90 -30 0 c-27 0 -30 3 -30 30 l0 30 180 0 180 0 0 -30 0 -30 60 0 60 0 0 30 c0 27 3 30 30 30 l30 0 0 -89 0 -90 -27 -3 c-22 -2 -29 -9 -31 -30 -3 -24 -8 -28 -33 -28 -29 0 -29 0 -29 60 l0 60 -60 0 -60 0 0 30 0 31 -87 -3 c-88 -3 -88 -3 -91 -30 -3 -28 -3 -28 57 -28 l61 0 0 -59 c0 -58 -1 -60 -27 -63 l-28 -3 -3 -117 -3 -118 61 0 60 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 l0 30 60 0 60 0 0 -60 0 -60 -30 0 -30 0 0 -149 0 -150 -27 -3 c-28 -3 -28 -3 -31 -90 l-3 -88 -29 0 c-27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 -120 0 -120 -60 0 -60 0 0 90 0 90 -30 0 -30 0 0 60 0 60 -30 0 -30 0 0 -120 0 -120 30 0 c27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -26 -3 -28 -6 -31 -60 -3 -53 -5 -57 -30 -60 -25 -3 -27 -6 -30 -60 l-3 -58 31 0 30 0 0 -59 c0 -58 -1 -60 -27 -63 -22 -2 -29 -9 -31 -30 -3 -28 -3 -28 57 -28 l61 0 0 -30 c0 -27 3 -30 30 -30 l30 0 0 90 0 90 -30 0 -30 0 0 60 0 60 60 0 60 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 l0 30 150 0 150 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 60 0 60 -30 0 c-27 0 -30 3 -30 30 l0 30 60 0 60 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -28 -3 -28 -3 -31 -90 l-3 -88 -29 0 -30 0 0 150 0 150 -60 0 -60 0 0 30 0 30 60 0 60 0 0 -30 c0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 l0 30 -60 0 -60 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 l30 0 0 60 0 60 30 0 30 0 0 -60 0 -60 60 0 60 0 0 -30 c0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 l31 0 0 -90 0 -90 -30 0 c-27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 l30 0 0 -210 0 -210 -30 0 c-27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 l30 0 0 -120 0 -120 -30 0 c-27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 l30 0 0 -60 0 -60 -30 0 c-27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 l30 0 0 -89 0 -90 -27 -3 c-27 -3 -28 -6 -31 -60 l-3 -58 31 0 30 0 0 -60 0 -60 -30 0 -30 0 0 60 0 60 -30 0 -30 0 0 120 0 120 30 0 c27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 l30 0 0 60 0 60 -30 0 c-27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 -3 30 -30 30 l-30 0 0 61 c0 60 0 60 -27 57 -22 -2 -29 -9 -31 -30 -3 -24 -8 -28 -33 -28 -26 0 -29 -3 -29 -30 l0 -30 -90 0 -90 0 0 120 0 120 -60 0 -60 0 0 -89 0 -90 -27 -3 c-22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 28 0 31 -3 31 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 l0 30 150 0 150 0 0 -30 c0 -28 -1 -29 -57 -32 -55 -3 -58 -4 -61 -30 -3 -25 0 -28 27 -28 l31 0 0 -60 0 -60 30 0 30 0 0 60 0 60 30 0 30 0 0 -60 0 -60 -30 0 c-27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 l30 0 0 -90 0 -90 -30 0 c-27 0 -30 -3 -30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -31 -3 -24 0 -27 27 -27 l31 0 0 -90 0 -90 30 0 30 0 0 -60 0 -60 30 0 30 0 0 -60 0 -60 30 0 c27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 l0 -30 -60 0 -60 0 0 60 0 60 -90 0 -90 0 0 60 0 61 -57 -3 c-55 -3 -58 -5 -61 -30 -3 -21 -9 -27 -30 -30 -21 -2 -28 -9 -30 -31 -3 -24 0 -27 27 -27 28 0 31 -3 31 -30 0 -28 -1 -29 -57 -32 -55 -3 -58 -4 -61 -30 -3 -24 -8 -28 -33 -28 -29 0 -29 0 -29 60 l0 60 -30 0 -30 0 0 -60 0 -60 -120 0 -120 0 0 30 c0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30 l0 -30 -60 0 -60 0 0 30 0 30 60 0 60 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 3 -30 30 l0 30 90 0 90 0 0 30 0 31 -147 -3 -148 -3 -3 -57 c-3 -53 -5 -57 -30 -60 -21 -2 -28 -9 -30 -30 -3 -25 0 -28 27 -28 28 0 31 -3 31 -30 l0 -30 -60 0 -60 0 0 -30 c0 -27 3 -30 30 -30 l30 0 0 -90 0 -90 -30 0 -30 0 0 60 0 60 -30 0 c-27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 l30 0 0 61 c0 60 0 60 -27 57 -22 -2 -29 -9 -31 -30 -3 -24 -8 -28 -33 -28 -26 0 -29 3 -29 30 0 27 -3 30 -30 30 l-30 0 0 60 0 60 60 0 60 0 0 30 c0 27 3 30 30 30 27 0 30 3 30 30 l0 31 -57 -3 c-55 -3 -58 -5 -61 -30 -3 -25 -7 -27 -60 -30 l-57 -3 -3 -87 -3 -87 -57 -3 -57 -3 -3 -57 -3 -58 31 0 c27 0 30 3 30 30 l0 30 60 0 60 0 0 -60 0 -60 30 0 c27 0 30 -3 30 -30 l0 -30 -90 0 -90 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -21 -9 -27 -30 -30 -21 -2 -28 -9 -30 -30 -3 -24 -8 -28 -33 -28 -26 0 -29 3 -29 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -27 -3 -28 -6 -31 -60 l-3 -58 -59 0 c-60 0 -60 0 -60 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -27 -3 -28 -6 -31 -60 l-3 -58 -89 0 -90 0 0 30 c0 27 3 30 30 30 l30 0 0 60 0 60 -30 0 c-27 0 -30 -3 -30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -31 -3 -23 -8 -27 -33 -27 -26 0 -29 -3 -29 -30 l0 -30 -90 0 -90 0 0 90 0 90 30 0 c27 0 30 3 30 30 0 27 -3 30 -30 30 l-30 0 0 120 0 120 -60 0 -60 0 0 30 c0 27 3 30 30 30 27 0 30 3 30 30 l0 30 -60 0 -60 0 0 30 0 30 -60 0 -60 0 0 60 0 60 30 0 c27 0 30 3 30 30 0 27 -3 30 -30 30 l-30 0 0 60 0 60 30 0 c27 0 30 3 30 30 l0 30 -60 0 -60 0 0 -59 c0 -58 -1 -60 -27 -63 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 l31 0 0 -59 c0 -58 -1 -60 -27 -63 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 28 0 31 -3 31 -30 l0 -30 60 0 c60 0 60 0 60 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 l-3 -28 -90 0 -89 0 0 30 c0 27 3 30 30 30 l30 0 0 60 0 60 -30 0 -30 0 0 210 0 210 30 0 c27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 60 0 60 -30 0 c-27 0 -30 3 -30 30 l0 30 60 0 60 0 0 -60 0 -60 30 0 c27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 60 0 61 -87 -3 -88 -3 -3 -57 c-3 -57 -4 -58 -32 -58 -27 0 -30 3 -30 30 l0 30 -90 0 -90 0 0 90 0 90 -30 0 -30 0 0 120 0 120 60 0 60 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 l0 30 -120 0 -120 0 0 60 0 60 -30 0 c-27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 l30 0 0 60 0 60 30 0 c27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 l0 30 -60 0 -60 0 0 30 0 30 90 0 90 0 0 -60 0 -60 60 0 60 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 3 -30 30 l0 30 120 0 120 0 0 60 0 60 30 0 c27 0 30 3 30 30 l0 30 60 0 60 0 0 -60 0 -60 -30 0 -30 0 0 -60 0 -60 30 0 c27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 l0 -29 -87 -3 c-88 -3 -88 -3 -91 -30 l-3 -28 90 0 91 0 0 -30 0 -29 -87 -3 c-88 -3 -88 -3 -91 -30 -3 -24 -8 -28 -33 -28 -25 0 -29 -4 -29 -30 0 -28 -1 -29 -57 -32 -55 -3 -58 -4 -61 -30 -3 -25 0 -28 27 -28 28 0 31 -3 31 -30 l0 -30 90 0 90 0 0 90 0 90 60 0 60 0 0 -60 0 -60 30 0 c27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -24 -8 -28 -33 -28 -29 0 -29 0 -29 -60 l0 -60 30 0 c27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 l30 0 0 -90 0 -90 30 0 30 0 0 60 0 60 60 0 60 0 0 30 0 30 60 0 60 0 0 30 c0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 l0 -30 60 0 60 0 0 30 c0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 l-30 0 0 60 0 60 -30 0 c-27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 l-30 0 0 150 0 150 -30 0 c-27 0 -30 -3 -30 -29 0 -25 -4 -30 -27 -33 -28 -3 -28 -3 -31 -90 l-3 -88 31 0 c27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 l30 0 0 -60 0 -60 -30 0 -30 0 0 60 0 60 -30 0 c-27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 l-30 0 0 90 0 90 30 0 c27 0 30 3 30 30 l0 30 -60 0 -60 0 0 120 0 120 -30 0 -30 0 0 60 0 60 30 0 c27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 60 0 60 -60 0 -60 0 0 90 0 90 30 0 30 0 0 120 0 120 -30 0 c-27 0 -30 3 -30 30 l0 30 180 0 180 0 0 -60z m1860 -150 l0 -210 -210 0 -210 0 0 210 0 210 210 0 210 0 0 -210z m-2220 30 l0 -60 -30 0 c-27 0 -30 3 -30 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -24 -8 -28 -33 -28 -26 0 -29 3 -29 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 l0 30 120 0 120 0 0 -60z m1680 -630 c0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m60 -300 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m0 -120 l0 -30 -60 0 -60 0 0 30 0 30 60 0 60 0 0 -30z m420 -1200 c0 -27 3 -30 30 -30 l30 0 0 -120 0 -120 -30 0 c-27 0 -30 3 -30 30 0 27 -3 30 -30 30 l-30 0 0 120 0 120 30 0 c27 0 30 -3 30 -30z m-2460 -300 l0 -210 -210 0 -210 0 0 210 0 210 210 0 210 0 0 -210z m2340 -180 l0 -30 -90 0 -90 0 0 30 0 30 90 0 90 0 0 -30z" />
+                <path
+                  d="M220 2930 l0 -150 150 0 150 0 0 150 0 150 -150 0 -150 0 0 -150z m240 0 l0 -90 -90 0 -90 0 0 90 0 90 90 0 90 0 0 -90z" />
+                <path
+                  d="M1007 3073 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 28 0 31 3 31 30 0 27 3 30 30 30 l30 0 0 -60 0 -60 30 0 30 0 0 -120 0 -120 -30 0 -30 0 0 90 0 90 -30 0 c-27 0 -30 3 -30 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -21 -9 -27 -30 -30 -21 -2 -28 -9 -30 -30 -3 -25 0 -28 27 -28 28 0 31 3 31 30 0 27 3 30 30 30 l30 0 0 -120 0 -120 -30 0 c-27 0 -30 -3 -30 -30 l0 -30 60 0 60 0 0 -30 c0 -27 3 -30 30 -30 l30 0 0 60 0 60 30 0 c27 0 30 -3 30 -30 l0 -30 60 0 60 0 0 -30 c0 -27 3 -30 30 -30 27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 28 0 31 3 31 30 0 27 3 30 30 30 27 0 30 -3 30 -30 l0 -30 90 0 90 0 0 -29 c0 -25 -4 -30 -27 -33 -27 -3 -28 -6 -31 -60 l-3 -58 31 0 c27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 l31 0 0 -60 0 -60 -60 0 -60 0 0 120 0 120 -60 0 -60 0 0 61 c0 60 0 60 -27 57 -28 -3 -28 -3 -31 -90 -3 -86 -3 -87 -30 -90 -21 -2 -28 -9 -30 -30 -3 -25 0 -28 27 -28 28 0 31 -3 31 -30 0 -27 3 -30 30 -30 l30 0 0 -60 0 -60 30 0 c27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 l0 -30 60 0 60 0 0 30 c0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 -90 0 -90 30 0 30 0 0 60 0 60 30 0 c27 0 30 -3 30 -30 l0 -30 60 0 c60 0 60 0 60 -30 0 -28 -1 -29 -57 -32 -55 -3 -58 -4 -61 -30 -3 -28 -3 -28 57 -28 61 0 61 0 61 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -21 -9 -27 -30 -30 -27 -3 -27 -4 -30 -90 l-3 -88 31 0 30 0 0 -60 0 -60 -60 0 -60 0 0 90 0 90 -30 0 c-27 0 -30 3 -30 30 0 27 3 30 30 30 l30 0 0 61 c0 60 0 60 -27 57 -27 -3 -28 -6 -31 -60 l-3 -57 -87 -3 c-87 -3 -87 -3 -90 -30 l-3 -28 90 0 91 0 0 -90 0 -90 -60 0 -60 0 0 61 c0 60 0 60 -27 57 -22 -2 -29 -9 -31 -30 -3 -21 -9 -27 -30 -30 l-27 -3 -3 -117 -3 -118 -59 0 c-60 0 -60 0 -60 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -28 -3 -28 -3 -31 -90 -3 -86 -3 -87 -30 -90 -21 -2 -28 -9 -30 -31 -3 -23 -8 -27 -33 -27 l-29 0 0 150 0 150 30 0 30 0 0 61 c0 60 0 60 -27 57 -27 -3 -28 -6 -31 -60 -3 -57 -4 -58 -32 -58 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 28 0 31 -3 31 -29 0 -25 -4 -30 -27 -33 -28 -3 -28 -3 -31 -90 l-3 -88 31 0 c27 0 30 -3 30 -30 l0 -30 -90 0 -90 0 0 90 0 90 -30 0 c-27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 l30 0 0 61 c0 60 0 60 -27 57 -26 -3 -28 -6 -31 -60 -3 -53 -5 -57 -30 -60 -21 -2 -28 -9 -30 -30 -3 -21 -9 -27 -30 -30 -21 -2 -28 -9 -30 -30 -3 -25 -7 -27 -60 -30 -54 -3 -57 -5 -60 -30 -3 -25 -7 -27 -60 -30 l-57 -3 -3 -57 -3 -58 -59 0 c-60 0 -60 0 -60 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 l0 30 60 0 60 0 0 30 0 30 -60 0 -60 0 0 -30 c0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 l0 -30 60 0 60 0 0 30 c0 27 3 30 30 30 l30 0 0 -60 0 -60 30 0 c27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -31 -3 -24 0 -27 27 -27 28 0 31 -3 31 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -28 -3 -28 57 -28 61 0 61 0 61 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -21 -9 -27 -30 -30 -25 -3 -27 -6 -30 -61 l-3 -57 31 0 c27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 60 0 60 -30 0 c-27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 l0 30 60 0 60 0 0 60 0 60 90 0 90 0 0 -60 0 -60 -30 0 c-27 0 -30 3 -30 31 0 27 -3 30 -27 27 -27 -3 -28 -6 -31 -60 l-3 -58 31 0 c27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -27 -3 -28 -6 -31 -60 l-3 -58 31 0 30 0 0 60 0 60 60 0 60 0 0 60 0 60 30 0 c27 0 30 -3 30 -30 l0 -30 60 0 60 0 0 -30 0 -30 60 0 60 0 0 90 0 90 -30 0 c-27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 -3 30 -30 30 l-30 0 0 60 0 60 30 0 c27 0 30 -3 30 -30 l0 -30 60 0 60 0 0 -90 0 -90 30 0 c27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 60 0 60 30 0 c27 0 30 -3 30 -30 l0 -30 60 0 60 0 0 -30 0 -30 60 0 60 0 0 -30 c0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 90 0 90 30 0 c27 0 30 3 30 30 0 27 -3 30 -30 30 l-30 0 0 90 0 90 30 0 c27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 -3 30 -30 30 l-30 0 0 60 0 60 60 0 60 0 0 30 c0 27 3 30 30 30 l30 0 0 -90 0 -90 30 0 c27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -28 -3 -28 -3 -31 -90 l-3 -88 31 0 c27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 60 0 60 60 0 60 0 0 -30 c0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -27 -5 -28 -63 -28 -59 0 -59 0 -59 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 l0 30 60 0 60 0 0 61 c0 60 0 60 -27 57 -22 -2 -29 -9 -31 -31 -3 -26 -5 -27 -63 -27 -59 0 -59 0 -59 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 l31 0 0 -60 0 -60 -30 0 c-27 0 -30 3 -30 30 0 27 -3 30 -30 30 l-30 0 0 60 0 60 -30 0 c-27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -28 -3 -28 -3 -31 -90 -3 -86 -3 -87 -30 -90 -21 -2 -28 -9 -30 -30 -3 -24 -8 -28 -33 -28 -29 0 -29 0 -29 60 l0 60 30 0 30 0 0 60 0 60 -90 0 -90 0 0 30 c0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 l-30 0 0 60 0 60 -30 0 -30 0 0 60 0 60 30 0 c27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 -3 30 -30 30 l-30 0 0 90 0 90 30 0 c27 0 30 3 30 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -24 -8 -28 -33 -28 -26 0 -29 3 -29 30 0 27 -3 30 -30 30 l-30 0 0 60 0 60 30 0 c27 0 30 -3 30 -30 l0 -30 90 0 90 0 0 30 0 30 60 0 60 0 0 150 0 150 30 0 c27 0 30 3 30 30 l0 30 -90 0 -90 0 0 150 0 150 -30 0 c-27 0 -30 -3 -30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -21 -9 -27 -30 -30 -21 -2 -28 -9 -30 -30 -3 -24 -8 -28 -33 -28 -26 0 -29 3 -29 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 l31 0 0 -60 0 -60 -60 0 -60 0 0 121 0 120 -27 -3 -28 -3 -3 -117 -3 -117 -117 -3 -117 -3 -3 -57 c-3 -57 -4 -58 -32 -58 -27 0 -30 3 -30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 l0 30 -60 0 -60 0 0 60 0 60 -30 0 c-27 0 -30 3 -30 30 l0 30 -60 0 -60 0 0 60 0 60 -30 0 c-27 0 -30 3 -30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z m293 -323 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m840 -90 l0 -120 -60 0 -60 0 0 -30 0 -30 90 0 90 0 0 30 c0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -27 -3 -28 -6 -31 -60 l-3 -58 -59 0 c-60 0 -60 0 -60 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -26 -3 -28 -6 -31 -60 -3 -53 -5 -57 -30 -60 -27 -3 -27 -4 -30 -90 l-3 -88 31 0 c27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -27 -3 -28 -6 -31 -60 l-3 -58 31 0 c27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 l-30 0 0 -60 0 -60 -30 0 -30 0 0 60 0 60 -90 0 -90 0 0 30 c0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 l30 0 0 150 0 150 -30 0 c-27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 l-30 0 0 -60 0 -60 -30 0 -30 0 0 60 0 60 30 0 c27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 -60 0 -60 30 0 30 0 0 60 0 60 30 0 30 0 0 90 0 90 30 0 c27 0 30 3 30 30 0 27 3 30 30 30 l30 0 0 -120z m-780 -60 l0 -60 30 0 c27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 l0 30 -60 0 -60 0 0 60 0 60 60 0 60 0 0 -60z m300 -150 l0 -90 -30 0 -30 0 0 90 0 90 30 0 30 0 0 -90z m-240 -420 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m660 -720 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m-1140 -149 c0 -58 -1 -60 -27 -63 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 l31 0 0 -90 0 -90 60 0 60 0 0 -30 0 -30 -60 0 -60 0 0 -30 c0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 l-30 0 0 90 0 90 -30 0 c-27 0 -30 3 -30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 l0 30 60 0 60 0 0 30 c0 27 3 30 30 30 30 0 30 0 30 -59z m-420 -31 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m900 -60 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m240 0 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m120 -60 l0 -90 -30 0 -30 0 0 90 0 90 30 0 30 0 0 -90z m540 60 c0 -27 3 -30 30 -30 l30 0 0 -60 0 -60 -30 0 c-27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 l30 0 0 60 0 60 -30 0 c-27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m-420 -90 l0 -60 30 0 30 0 0 -60 0 -60 -30 0 -30 0 0 60 0 60 -30 0 -30 0 0 60 0 60 30 0 30 0 0 -60z m600 30 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m120 0 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m-1800 -60 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m240 0 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m120 -30 l0 -60 -30 0 -30 0 0 60 0 60 30 0 30 0 0 -60z m120 30 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m360 -30 l0 -60 -30 0 -30 0 0 60 0 60 30 0 30 0 0 -60z m900 -30 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m-1740 -60 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m360 -60 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m240 0 c0 -27 -3 -30 -30 -30 l-30 0 0 -60 0 -60 30 0 c27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 l0 30 -60 0 -60 0 0 60 0 60 60 0 60 0 0 30 c0 27 3 30 30 30 27 0 30 -3 30 -30z" />
+                <path d="M1780 2390 c0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30z" />
+                <path
+                  d="M1607 3073 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 28 0 31 3 31 30 0 27 3 30 30 30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z" />
+                <path
+                  d="M1300 2991 c0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 28 0 31 3 31 30 0 27 3 30 30 30 l30 0 0 -60 0 -60 30 0 30 0 0 -60 0 -60 30 0 30 0 0 60 0 60 -30 0 -30 0 0 60 0 60 -30 0 c-27 0 -30 3 -30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -29z" />
+                <path d="M1480 2990 c0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30z" />
+                <path
+                  d="M1547 2833 c-4 -3 -7 -44 -7 -90 l0 -83 90 0 90 0 0 90 0 90 -83 0 c-46 0 -87 -3 -90 -7z m113 -83 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z" />
+                <path d="M700 2750 c0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30z" />
+                <path d="M2380 2750 c0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30z" />
+                <path
+                  d="M527 2593 c-4 -3 -7 -17 -7 -30 0 -19 -5 -23 -30 -23 -27 0 -30 -3 -30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 l-3 -28 90 0 91 0 0 -30 c0 -28 -1 -29 -57 -32 -55 -3 -58 -4 -61 -30 -3 -24 -8 -28 -33 -28 -26 0 -29 3 -29 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -27 -5 -28 -63 -28 -59 0 -59 0 -59 -30 l0 -30 90 0 90 0 0 -30 0 -30 120 0 120 0 0 30 0 30 -60 0 -60 0 0 30 c0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 l30 0 0 90 0 90 60 0 60 0 0 30 0 30 -113 0 c-63 0 -117 -3 -120 -7z m53 -83 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z" />
+                <path
+                  d="M2920 2570 c0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 l30 0 0 -60 0 -60 30 0 30 0 0 -60 0 -60 -30 0 c-27 0 -30 3 -30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 -3 30 -30 30 l-30 0 0 90 0 90 -30 0 c-27 0 -30 -3 -30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 -90 0 -90 30 0 c27 0 30 -3 30 -30 0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 l30 0 0 -60 0 -60 -60 0 -60 0 0 -30 0 -30 90 0 90 0 0 -30 c0 -28 -1 -29 -57 -32 l-58 -3 -3 -57 -3 -58 31 0 c27 0 30 -3 30 -30 l0 -30 60 0 60 0 0 60 0 60 -30 0 c-27 0 -30 3 -30 30 0 27 3 30 30 30 l30 0 0 150 0 150 -30 0 c-27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 l30 0 0 90 0 90 -30 0 -30 0 0 90 0 90 -30 0 c-27 0 -30 -3 -30 -30z m60 -540 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z" />
+                <path
+                  d="M707 2473 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z" />
+                <path
+                  d="M1007 2413 c-4 -3 -7 -30 -7 -60 0 -52 0 -53 30 -53 l30 0 0 60 c0 56 -1 60 -23 60 -13 0 -27 -3 -30 -7z" />
+                <path
+                  d="M1247 2413 c-4 -3 -7 -30 -7 -60 0 -52 0 -53 30 -53 l30 0 0 60 c0 56 -1 60 -23 60 -13 0 -27 -3 -30 -7z" />
+                <path
+                  d="M1127 2353 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z" />
+                <path
+                  d="M1487 2233 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z" />
+                <path
+                  d="M2327 2113 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z" />
+                <path
+                  d="M1067 2053 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z" />
+                <path d="M340 1910 c0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30z" />
+                <path
+                  d="M580 1910 c0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30z" />
+                <path
+                  d="M820 1850 c0 -28 -1 -29 -57 -32 l-58 -3 -3 -87 -3 -88 31 0 c27 0 30 -3 30 -29 0 -25 -4 -30 -27 -33 -27 -3 -28 -6 -31 -60 l-3 -58 31 0 c27 0 30 -3 30 -30 l0 -30 -60 0 -60 0 0 -30 0 -30 60 0 60 0 0 -30 c0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 l30 0 0 61 c0 60 0 60 -27 57 -27 -3 -28 -6 -31 -60 -3 -57 -4 -58 -32 -58 -30 0 -30 0 -30 60 l0 60 -30 0 c-27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 l0 30 -60 0 -60 0 0 30 c0 27 3 30 30 30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30z" />
+                <path
+                  d="M227 1813 c-4 -3 -7 -30 -7 -60 0 -52 0 -53 30 -53 27 0 30 -3 30 -30 l0 -30 60 0 60 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 3 30 30 l0 30 -83 0 c-46 0 -87 -3 -90 -7z" />
+                <path
+                  d="M467 1753 c-4 -3 -7 -44 -7 -90 l0 -83 90 0 90 0 0 90 0 90 -83 0 c-46 0 -87 -3 -90 -7z m113 -83 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z" />
+                <path
+                  d="M1547 1753 c-4 -3 -7 -44 -7 -90 l0 -83 90 0 90 0 0 90 0 90 -83 0 c-46 0 -87 -3 -90 -7z m113 -83 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z" />
+                <path
+                  d="M2440 1730 c0 -27 -3 -30 -30 -30 -27 0 -30 -3 -30 -29 0 -25 -4 -30 -27 -33 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 28 0 31 3 31 30 0 27 3 30 30 30 27 0 30 3 30 30 l0 30 60 0 60 0 0 30 0 30 -60 0 -60 0 0 -30z" />
+                <path
+                  d="M2627 1753 c-4 -3 -7 -44 -7 -90 l0 -83 90 0 90 0 0 90 0 90 -83 0 c-46 0 -87 -3 -90 -7z m113 -83 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z" />
+                <path
+                  d="M1120 1640 l0 -60 -60 0 -60 0 0 -30 0 -30 60 0 60 0 0 30 0 30 60 0 60 0 0 -30 0 -30 60 0 60 0 0 -30 c0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 -3 30 -30 l0 -30 120 0 120 0 0 30 0 30 -120 0 -120 0 0 60 0 60 -30 0 c-27 0 -30 3 -30 30 0 27 -3 30 -30 30 l-30 0 0 -60 0 -60 -60 0 -60 0 0 60 0 60 -60 0 -60 0 0 -60z m300 -90 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z" />
+                <path
+                  d="M347 1573 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z" />
+                <path
+                  d="M2687 1513 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z" />
+                <path
+                  d="M2927 1513 c-4 -3 -7 -30 -7 -60 0 -52 0 -53 30 -53 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 30 0 30 -1 30 -53 30 -30 0 -57 -3 -60 -7z" />
+                <path
+                  d="M1367 1393 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z" />
+                <path
+                  d="M1487 1393 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z" />
+                <path
+                  d="M400 950 c0 -27 3 -30 30 -30 27 0 30 -3 30 -30 l0 -30 90 0 90 0 0 30 0 30 -90 0 -90 0 0 30 c0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30z" />
+                <path
+                  d="M2807 973 c-4 -3 -7 -17 -7 -29 0 -17 -7 -23 -27 -26 -22 -2 -29 -9 -31 -30 -3 -28 -3 -28 57 -28 l61 0 0 60 c0 56 -1 60 -23 60 -13 0 -27 -3 -30 -7z" />
+                <path
+                  d="M2507 733 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z" />
+                <path
+                  d="M1547 673 c-4 -3 -7 -44 -7 -90 l0 -83 90 0 90 0 0 90 0 90 -83 0 c-46 0 -87 -3 -90 -7z m113 -83 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z" />
+                <path
+                  d="M2627 673 c-4 -3 -7 -44 -7 -90 l0 -83 90 0 90 0 0 90 0 90 -83 0 c-46 0 -87 -3 -90 -7z m113 -83 c0 -27 -3 -30 -30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z" />
+                <path
+                  d="M887 553 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z" />
+                <path
+                  d="M2447 553 c-4 -3 -7 -17 -7 -30 0 -22 4 -23 60 -23 l60 0 0 30 c0 30 -1 30 -53 30 -30 0 -57 -3 -60 -7z" />
+                <path
+                  d="M1247 493 c-4 -3 -7 -30 -7 -60 0 -52 0 -53 -30 -53 -27 0 -30 3 -30 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -25 0 -28 27 -28 28 0 31 -3 31 -30 0 -27 3 -30 30 -30 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 l30 0 0 120 c0 119 0 120 -23 120 -13 0 -27 -3 -30 -7z" />
+                <path
+                  d="M887 433 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 3 30 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z" />
+                <path
+                  d="M1367 433 c-4 -3 -7 -17 -7 -30 0 -19 5 -23 30 -23 27 0 30 -3 30 -30 0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 3 30 30 30 27 0 30 3 30 31 0 27 -3 30 -27 27 -22 -2 -29 -9 -31 -30 -3 -24 -8 -28 -33 -28 -26 0 -29 3 -29 30 0 25 -4 30 -23 30 -13 0 -27 -3 -30 -7z" />
+                <path
+                  d="M707 313 c-4 -3 -7 -17 -7 -30 0 -22 4 -23 60 -23 l60 0 0 30 c0 30 -1 30 -53 30 -30 0 -57 -3 -60 -7z" />
+                <path d="M1720 290 c0 -27 3 -30 30 -30 27 0 30 3 30 30 0 27 -3 30 -30 30 -27 0 -30 -3 -30 -30z" />
+                <path
+                  d="M2740 2930 l0 -150 150 0 150 0 0 150 0 150 -150 0 -150 0 0 -150z m240 0 l0 -90 -90 0 -90 0 0 90 0 90 90 0 90 0 0 -90z" />
+                <path
+                  d="M220 410 l0 -150 150 0 150 0 0 150 0 150 -150 0 -150 0 0 -150z m240 0 l0 -90 -90 0 -90 0 0 90 0 90 90 0 90 0 0 -90z" />
+              </g>
+            </svg>
+            <!-- <span class="text-primary opacity-60 text-sm">QR Code</span> -->
           </div>
         </div>
+        <h2 class="text-2xl font-bold text-primary">Gostou do Leitor de Texto?</h2>
+        <p class="text-sm text-primary opacity-90">
+          Se este projeto foi útil para você, considere fazer uma doação para apoiar o desenvolvimento contínuo.
+        </p>
+        <div class="flex justify-center pt-2">
+          <button onclick="closeDonationModal()"
+            class="btn-shine inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-white/20 backdrop-blur-sm font-semibold border border-white/30 shadow-lg hover:bg-white/30 hover:shadow-xl transition-all duration-200 text-primary">
+            Talvez Depois
+          </button>
+        </div>
       </div>
-    </footer>
+    </div>
+  </div>
 
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5CK6BH8"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <footer class="fixed bottom-0 left-0 right-0 z-40 flex justify-center p-4">
+    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-2xl px-6 py-4 max-w-2xl w-full">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+        <div class="text-xs text-primary">
+          <p class="inline-flex items-center gap-1">
+            <i data-lucide="copyright" class="w-4 h-4 inline-block"></i>
+            2025 Leitor de texto. Todos os direitos reservados.
+          </p>
+        </div>
+        <div class="text-xs text-primary">
+          <p class="inline-flex items-center gap-1">
+            Gostou? Considere
+            <a id="donationLink" href="#"
+              class="font-semibold hover:opacity-80 underline transition-colors duration-200 text-primary cursor-pointer">apoiar
+              o projeto</a>
+            <i data-lucide="heart" class="w-4 h-4 inline-block"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5CK6BH8" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-    <script>
-      const STORAGE_KEY = 'demo_tts_text';
-      const RATE_KEY = 'demo_tts_rate';
+  <script>
+    const STORAGE_KEY = 'demo_tts_text';
+    const RATE_KEY = 'demo_tts_rate';
 
-      const synth = window.speechSynthesis;
-      const textEl = document.getElementById('text');
-      const playBtn = document.getElementById('btnPlay');
-      const pauseBtn = document.getElementById('btnPause');
-      const saveBtn = document.getElementById('btnSave');
-      const rateSlider = document.getElementById('rate');
-      const rateValue = document.getElementById('rateValue');
-      const donationModal = document.getElementById('donationModal');
+    const synth = window.speechSynthesis;
+    const textEl = document.getElementById('text');
+    const playBtn = document.getElementById('btnPlay');
+    const pauseBtn = document.getElementById('btnPause');
+    const saveBtn = document.getElementById('btnSave');
+    const rateSlider = document.getElementById('rate');
+    const rateValue = document.getElementById('rateValue');
+    const donationModal = document.getElementById('donationModal');
 
-      let isPlaying = false;
-      let currentUtterance = null;
-      let cachedVoices = [];
+    let isPlaying = false;
+    let currentUtterance = null;
+    let cachedVoices = [];
 
-      function initStorage() {
-        try {
-          const saved = localStorage.getItem(STORAGE_KEY);
-          if (saved) textEl.value = saved;
-          const savedRate = localStorage.getItem(RATE_KEY);
-          if (savedRate) {
-            rateSlider.value = savedRate;
-            rateValue.textContent = parseFloat(savedRate).toFixed(1) + 'x';
-          }
-        } catch (_) {}
-      }
-
-      function cacheVoices() {
-        const voices = synth.getVoices();
-        if (voices && voices.length) cachedVoices = voices;
-      }
-
-      function initIcons() {
-        if (typeof lucide !== 'undefined') {
-          lucide.createIcons();
+    function initStorage() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) textEl.value = saved;
+        const savedRate = localStorage.getItem(RATE_KEY);
+        if (savedRate) {
+          rateSlider.value = savedRate;
+          rateValue.textContent = parseFloat(savedRate).toFixed(1) + 'x';
         }
+      } catch (_) { }
+    }
+
+    function cacheVoices() {
+      const voices = synth.getVoices();
+      if (voices && voices.length) cachedVoices = voices;
+    }
+
+    function initIcons() {
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    }
+
+    function pickPtVoice() {
+      if (!cachedVoices.length) return null;
+      return (
+        cachedVoices.find(v => /pt-BR/i.test(v.lang)) ||
+        cachedVoices.find(v => /^pt/i.test(v.lang)) ||
+        null
+      );
+    }
+
+    function createUtterance(text, rate) {
+      const utter = new SpeechSynthesisUtterance(text);
+      const voice = pickPtVoice();
+
+      if (voice) {
+        utter.voice = voice;
+        utter.lang = voice.lang;
+      } else {
+        utter.lang = 'pt-BR';
       }
 
-      function pickPtVoice() {
-        if (!cachedVoices.length) return null;
-        return (
-          cachedVoices.find(v => /pt-BR/i.test(v.lang)) ||
-          cachedVoices.find(v => /^pt/i.test(v.lang)) ||
-          null
-        );
+      utter.rate = parseFloat(rate);
+      utter.pitch = 1.0;
+      utter.volume = 1.0;
+
+      return utter;
+    }
+
+    initStorage();
+    cacheVoices();
+    synth.onvoiceschanged = cacheVoices;
+
+    function toast(msg) {
+      const host = document.getElementById('toast');
+      const el = document.createElement('div');
+      el.className =
+        "pointer-events-auto bg-white/95 backdrop-blur-md text-slate-900 border border-white/30 rounded-lg px-5 py-3 shadow-2xl font-medium animate-in fade-in slide-in-from-top-2 duration-300";
+      el.textContent = msg;
+      host.appendChild(el);
+      setTimeout(() => {
+        el.classList.add('opacity-0', 'transition-all', 'duration-300');
+        setTimeout(() => host.removeChild(el), 300);
+      }, 2000);
+    }
+
+    function updateButtonsState(playing) {
+      isPlaying = playing;
+      playBtn.disabled = playing;
+      pauseBtn.disabled = !playing;
+      initIcons();
+    }
+
+    function showDonationModal() {
+      donationModal.classList.remove('opacity-0', 'pointer-events-none', 'hidden');
+      donationModal.classList.add('opacity-100', 'flex');
+      const overlay = donationModal.firstElementChild;
+      if (overlay) overlay.style.pointerEvents = 'auto';
+      const modalContent = donationModal.querySelector('.relative');
+      if (modalContent) {
+        modalContent.style.pointerEvents = 'auto';
+        modalContent.classList.remove('scale-95');
+        modalContent.classList.add('scale-100');
       }
+      initIcons();
+    }
 
-      function createUtterance(text, rate) {
-        const utter = new SpeechSynthesisUtterance(text);
-        const voice = pickPtVoice();
-
-        if (voice) {
-          utter.voice = voice;
-          utter.lang = voice.lang;
-        } else {
-          utter.lang = 'pt-BR';
-        }
-
-        utter.rate = parseFloat(rate);
-        utter.pitch = 1.0;
-        utter.volume = 1.0;
-
-        return utter;
+    function closeDonationModal() {
+      donationModal.classList.remove('opacity-100', 'flex');
+      donationModal.classList.add('pointer-events-none', 'opacity-0', 'hidden');
+      const overlay = donationModal.firstElementChild;
+      if (overlay) overlay.style.pointerEvents = 'none';
+      const modalContent = donationModal.querySelector('.relative');
+      if (modalContent) {
+        modalContent.style.pointerEvents = 'none';
+        modalContent.classList.add('scale-95');
+        modalContent.classList.remove('scale-100');
       }
+    }
 
-      initStorage();
-      cacheVoices();
-      synth.onvoiceschanged = cacheVoices;
+    window.closeDonationModal = closeDonationModal;
+    window.showDonationModal = showDonationModal;
 
-      function toast(msg) {
-        const host = document.getElementById('toast');
-        const el = document.createElement('div');
-        el.className =
-          "pointer-events-auto bg-white/95 backdrop-blur-md text-slate-900 border border-white/30 rounded-lg px-5 py-3 shadow-2xl font-medium animate-in fade-in slide-in-from-top-2 duration-300";
-        el.textContent = msg;
-        host.appendChild(el);
-        setTimeout(() => {
-          el.classList.add('opacity-0', 'transition-all', 'duration-300');
-          setTimeout(() => host.removeChild(el), 300);
-        }, 2000);
-      }
+    function speakText(text) {
+      currentUtterance = createUtterance(text, rateSlider.value);
+      synth.speak(currentUtterance);
 
-      function updateButtonsState(playing) {
-        isPlaying = playing;
-        playBtn.disabled = playing;
-        pauseBtn.disabled = !playing;
-        initIcons();
-      }
-
-      function showDonationModal() {
-        donationModal.classList.remove('opacity-0', 'pointer-events-none');
-        donationModal.classList.add('opacity-100');
-        const overlay = donationModal.firstElementChild;
-        if (overlay) overlay.style.pointerEvents = 'auto';
-        const modalContent = donationModal.querySelector('.relative');
-        if (modalContent) {
-          modalContent.style.pointerEvents = 'auto';
-          modalContent.classList.remove('scale-95');
-          modalContent.classList.add('scale-100');
-        }
-        initIcons();
-      }
-
-      function closeDonationModal() {
-        donationModal.classList.add('pointer-events-none', 'opacity-0');
-        donationModal.classList.remove('opacity-100');
-        const overlay = donationModal.firstElementChild;
-        if (overlay) overlay.style.pointerEvents = 'none';
-        const modalContent = donationModal.querySelector('.relative');
-        if (modalContent) {
-          modalContent.style.pointerEvents = 'none';
-          modalContent.classList.add('scale-95');
-          modalContent.classList.remove('scale-100');
-        }
-      }
-
-      window.closeDonationModal = closeDonationModal;
-      window.showDonationModal = showDonationModal;
-
-      function speakText(text) {
-        currentUtterance = createUtterance(text, rateSlider.value);
-        synth.speak(currentUtterance);
-
-        setTimeout(() => {
-          if (synth.speaking) {
-            updateButtonsState(true);
-          }
-        }, 100);
-
-        currentUtterance.onend = () => {
-          updateButtonsState(false);
-          currentUtterance = null;
-          setTimeout(() => showDonationModal(), 500);
-        };
-
-        currentUtterance.onerror = () => {
-          updateButtonsState(false);
-          currentUtterance = null;
-          toast('Não foi possível sintetizar a fala.');
-        };
-      }
-
-      playBtn.addEventListener('click', () => {
-        const text = textEl.value.trim();
-        if (!text) return toast('Digite um texto para reproduzir.');
-        if (synth.speaking || synth.pending) {
-          synth.cancel();
-        }
-        speakText(text);
-      });
-
-      pauseBtn.addEventListener('click', () => {
+      setTimeout(() => {
         if (synth.speaking) {
-          synth.pause();
-          updateButtonsState(false);
-        } else if (synth.paused) {
-          synth.resume();
           updateButtonsState(true);
         }
-      });
+      }, 100);
 
-      rateSlider.addEventListener('input', (e) => {
-        const value = parseFloat(e.target.value);
-        rateValue.textContent = value.toFixed(1) + 'x';
-        try {
-          localStorage.setItem(RATE_KEY, value.toString());
-        } catch (_) {}
+      currentUtterance.onend = () => {
+        updateButtonsState(false);
+        currentUtterance = null;
+        setTimeout(() => showDonationModal(), 500);
+      };
 
-        if (currentUtterance && (synth.speaking || synth.paused)) {
-          if (synth.paused) {
-            currentUtterance.rate = value;
-          } else {
-            const text = textEl.value.trim();
-            if (text) {
-              synth.cancel();
-              currentUtterance = createUtterance(text, value);
-              synth.speak(currentUtterance);
-              updateButtonsState(true);
-            }
+      currentUtterance.onerror = () => {
+        updateButtonsState(false);
+        currentUtterance = null;
+        toast('Não foi possível sintetizar a fala.');
+      };
+    }
+
+    playBtn.addEventListener('click', () => {
+      const text = textEl.value.trim();
+      if (!text) return toast('Digite um texto para reproduzir.');
+      if (synth.speaking || synth.pending) {
+        synth.cancel();
+      }
+      speakText(text);
+    });
+
+    pauseBtn.addEventListener('click', () => {
+      if (synth.speaking) {
+        synth.pause();
+        updateButtonsState(false);
+      } else if (synth.paused) {
+        synth.resume();
+        updateButtonsState(true);
+      }
+    });
+
+    rateSlider.addEventListener('input', (e) => {
+      const value = parseFloat(e.target.value);
+      rateValue.textContent = value.toFixed(1) + 'x';
+      try {
+        localStorage.setItem(RATE_KEY, value.toString());
+      } catch (_) { }
+
+      if (currentUtterance && (synth.speaking || synth.paused)) {
+        if (synth.paused) {
+          currentUtterance.rate = value;
+        } else {
+          const text = textEl.value.trim();
+          if (text) {
+            synth.cancel();
+            currentUtterance = createUtterance(text, value);
+            synth.speak(currentUtterance);
+            updateButtonsState(true);
           }
         }
-      });
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && !donationModal.classList.contains('opacity-0')) {
-          closeDonationModal();
-        }
-      });
-
-      const donationLink = document.getElementById('donationLink');
-      if (donationLink) {
-        donationLink.addEventListener('click', (e) => {
-          e.preventDefault();
-          showDonationModal();
-        });
       }
+    });
 
-      initIcons();
-    </script>
-  </body>
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !donationModal.classList.contains('opacity-0')) {
+        closeDonationModal();
+      }
+    });
+
+    const donationLink = document.getElementById('donationLink');
+    if (donationLink) {
+      donationLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        showDonationModal();
+      });
+    }
+
+    initIcons();
+  </script>
+</body>
+
 </html>
