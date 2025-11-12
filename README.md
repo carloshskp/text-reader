@@ -33,17 +33,20 @@ A modern and responsive web application that converts text to speech, allowing u
 - **CSS3**: Styles with backdrop-filter and gradient support
 - **JavaScript**: Application logic
 - **Tailwind CSS**: Utility-first CSS framework
-- **Lucide Icons**: Modern SVG icons
+- **Inline SVG Icons**: Lucide icons embutidos diretamente no markup (sem dependências externas)
 - **Web Speech API**: Native browser speech synthesis
 
 ## 📦 Dependencies
 
 - [Tailwind CSS](https://tailwindcss.com/) - via CDN
-- [Lucide Icons](https://lucide.dev/) - via CDN
 
 ## 💾 Local Storage
 
 The application saves text in the browser's `localStorage`, allowing you to easily retrieve your content on future visits.
+
+## 📊 PageSpeed Insights
+
+- **Última medição (2025-11-12)**: tentativa de execução via PageSpeed Insights bloqueada pelo ambiente (resposta HTTP 403). Recomendamos repetir o teste em um ambiente conectado para capturar métricas atualizadas após a remoção dos ícones externos.
 
 ## 🎯 Available Voices
 
@@ -62,6 +65,7 @@ The application automatically tries to select a Brazilian Portuguese (pt-BR) voi
 - Voice quality depends on the voices available on your operating system
 - Some browsers may have limitations on text length for speech synthesis
 - Playback speed may vary depending on the browser and operating system
+- Ícones são renderizados inline como SVG, eliminando a dependência do CDN do Lucide
 
 ## 📄 License
 

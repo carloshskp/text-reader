@@ -63,7 +63,6 @@
     </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -203,22 +202,22 @@
       class="w-full px-4 py-3 rounded-lg bg-white/30 backdrop-blur-sm border-2 border-white/50 shadow-xl flex items-center gap-3">
       <button id="btnPlay"
         class="btn-shine inline-flex items-center justify-center px-4 py-3 rounded-lg bg-white/30 backdrop-blur-sm font-semibold border-2 border-white/50 shadow-xl hover:bg-white/40 hover:shadow-2xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-primary">
-        <i id="playIcon" data-lucide="play" class="w-5 h-5"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" /></svg>
       </button>
       <button id="btnPause"
         class="btn-shine inline-flex items-center justify-center px-4 py-3 rounded-lg bg-white/30 backdrop-blur-sm font-semibold border-2 border-white/50 shadow-xl hover:bg-white/40 hover:shadow-2xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-primary"
         disabled>
-        <i id="pauseIcon" data-lucide="pause" class="w-5 h-5"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="3" width="5" height="18" rx="1" /><rect x="5" y="3" width="5" height="18" rx="1" /></svg>
       </button>
       <button id="btnSave"
         class="btn-shine inline-flex items-center justify-center px-4 py-3 rounded-lg bg-white/20 backdrop-blur-sm font-semibold border border-white/30 shadow-lg hover:bg-white/30 hover:shadow-xl transition-all duration-200 text-primary disabled:opacity-50 disabled:cursor-not-allowed"
         disabled>
-        <i data-lucide="save" class="w-5 h-5"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" /><path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7" /><path d="M7 3v4a1 1 0 0 0 1 1h7" /></svg>
       </button>
       <button id="btnClear"
         class="btn-shine inline-flex items-center justify-center px-4 py-3 rounded-lg bg-white/20 backdrop-blur-sm font-semibold border border-white/30 shadow-lg hover:bg-white/30 hover:shadow-xl transition-all duration-200 text-primary disabled:opacity-50 disabled:cursor-not-allowed"
         title="Limpar texto">
-        <i data-lucide="trash-2" class="w-5 h-5"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 11v6" /><path d="M14 11v6" /><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" /><path d="M3 6h18" /><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></svg>
       </button>
       <div class="flex items-center gap-3 flex-1 min-w-0">
         <span class="font-semibold text-sm whitespace-nowrap text-primary">0.5x</span>
@@ -252,11 +251,11 @@
       class="relative bg-white/75 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl p-8 max-w-md w-full pointer-events-auto transform scale-95 transition-transform duration-300">
       <button onclick="closeDonationModal()"
         class="absolute top-4 right-4 text-primary hover:opacity-70 transition-opacity">
-        <i data-lucide="x" class="w-6 h-6"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
       </button>
       <div class="text-center space-y-4">
         <div class="flex justify-center">
-          <i data-lucide="heart" class="w-12 h-12 text-primary"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-primary" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></svg>
         </div>
         <div class="flex justify-center">
           <div id="qrCodePlaceholder"
@@ -377,7 +376,7 @@
       <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
         <div class="text-xs text-primary">
           <p class="inline-flex items-center gap-1">
-            <i data-lucide="copyright" class="w-4 h-4 inline-block"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 inline-block" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M14.83 14.83a4 4 0 1 1 0-5.66" /></svg>
             2025 Carlos Bernardes. Todos os direitos reservados.
           </p>
         </div>
@@ -387,7 +386,7 @@
             <a id="donationLink" href="#"
               class="font-semibold hover:opacity-80 underline transition-colors duration-200 text-primary cursor-pointer">apoie
               o projeto</a>
-            <i data-lucide="heart" class="w-4 h-4 inline-block"></i>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 inline-block" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></svg>
           </p>
         </div>
       </div>
@@ -408,7 +407,7 @@
     const playBtn = document.getElementById('btnPlay');
     const pauseBtn = document.getElementById('btnPause');
     const saveBtn = document.getElementById('btnSave');
-  const clearBtn = document.getElementById('btnClear');
+    const clearBtn = document.getElementById('btnClear');
     const rateSlider = document.getElementById('rate');
     const rateValue = document.getElementById('rateValue');
     const donationModal = document.getElementById('donationModal');
@@ -432,12 +431,6 @@
     function cacheVoices() {
       const voices = synth.getVoices();
       if (voices && voices.length) cachedVoices = voices;
-    }
-
-    function initIcons() {
-      if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-      }
     }
 
     function pickPtVoice() {
@@ -492,7 +485,6 @@
         // Clear button is enabled only when there is no active playback
         clearBtn.disabled = playing;
       }
-      initIcons();
     }
 
     function showDonationModal() {
@@ -506,7 +498,6 @@
         modalContent.classList.remove('scale-95');
         modalContent.classList.add('scale-100');
       }
-      initIcons();
     }
 
     function closeDonationModal() {
@@ -618,7 +609,6 @@
       });
     }
 
-    initIcons();
   </script>
 </body>
 
