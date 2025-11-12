@@ -63,6 +63,12 @@ O aplicativo tenta selecionar automaticamente uma voz em português brasileiro (
 - Alguns navegadores podem ter limitações no comprimento do texto para síntese de fala
 - A velocidade de reprodução pode variar dependendo do navegador e do sistema operacional
 
+## 💖 Modal de Doação
+
+- O QR Code para doações via PIX agora está disponível em [`assets/qr-code.svg`](assets/qr-code.svg) e só é requisitado quando o modal de doação é aberto pela primeira vez, utilizando um `<img>` com `loading="lazy"` para manter o HTML inicial leve.
+- Um placeholder leve com dimensões fixas (`192x192`) evita mudanças de layout antes do carregamento da imagem.
+- A abertura do modal foi validada em visualizações móveis (modo responsivo do Chrome DevTools) para garantir que o QR Code seja exibido corretamente em dispositivos touch.
+
 ## 📄 Licença
 
 Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.

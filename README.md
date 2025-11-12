@@ -63,6 +63,12 @@ The application automatically tries to select a Brazilian Portuguese (pt-BR) voi
 - Some browsers may have limitations on text length for speech synthesis
 - Playback speed may vary depending on the browser and operating system
 
+## 💖 Donation Modal
+
+- The PIX donation QR code now lives at [`assets/qr-code.svg`](assets/qr-code.svg) and is only requested when the donation modal opens for the first time via a lazily loaded `<img>` tag, keeping the initial HTML payload lean.
+- A lightweight placeholder with fixed dimensions (`192x192`) prevents layout shifts before the QR code loads.
+- The modal was validated on mobile viewports (Chrome DevTools responsive mode) to ensure the QR code loads and remains accessible on touch devices.
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
