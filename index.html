@@ -240,7 +240,7 @@
 
   <!-- Modal de Doação -->
   <div id="donationModal"
-    class="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none opacity-0 transition-opacity duration-300">
+    class="hidden inset-0 z-50 flex items-center justify-center p-4 pointer-events-none opacity-0 transition-opacity duration-300">
     <div class="fixed inset-0 bg-black/40 backdrop-blur-sm" onclick="closeDonationModal()"></div>
     <div
       class="relative bg-white/75 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl p-8 max-w-md w-full pointer-events-auto transform scale-95 transition-transform duration-300">
@@ -486,7 +486,7 @@
 
     function showDonationModal() {
       donationModal.classList.remove('opacity-0', 'pointer-events-none', 'hidden');
-      donationModal.classList.add('opacity-100', 'flex');
+      donationModal.classList.add('opacity-100', 'fixed');
       const overlay = donationModal.firstElementChild;
       if (overlay) overlay.style.pointerEvents = 'auto';
       const modalContent = donationModal.querySelector('.relative');
@@ -499,7 +499,7 @@
     }
 
     function closeDonationModal() {
-      donationModal.classList.remove('opacity-100', 'flex');
+      donationModal.classList.remove('opacity-100', 'fixed');
       donationModal.classList.add('pointer-events-none', 'opacity-0', 'hidden');
       const overlay = donationModal.firstElementChild;
       if (overlay) overlay.style.pointerEvents = 'none';
