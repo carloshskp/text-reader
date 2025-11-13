@@ -25,20 +25,20 @@ Um aplicativo web moderno e responsivo que converte texto em fala, permitindo qu
 
 - Navegador moderno com suporte à Web Speech API
 - JavaScript habilitado
-- Conexão de internet (para carregar as dependências de CDN)
+- Conexão com a internet (para analytics ou download de novas vozes, opcional)
 
 ## 🛠️ Tecnologias Utilizadas
 
 - **HTML5**: Estrutura semântica
 - **CSS3**: Estilos com suporte a backdrop-filter e gradientes
 - **JavaScript**: Lógica de aplicação
-- **Tailwind CSS**: Framework de CSS utilitário
+- **Utilitários inspirados no Tailwind**: Subconjunto estático consolidado em [`assets/tailwind.css`](assets/tailwind.css)
 - **Lucide Icons**: Ícones SVG modernos
 - **Web Speech API**: Síntese de fala nativa do navegador
 
 ## 📦 Dependências
 
-- [Tailwind CSS](https://tailwindcss.com/) - via CDN
+- Subconjunto de utilitários Tailwind servido localmente em [`assets/tailwind.css`](assets/tailwind.css)
 - [Lucide Icons](https://lucide.dev/) - via CDN
 
 ## 📈 Métricas e privacidade

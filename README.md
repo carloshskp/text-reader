@@ -25,20 +25,20 @@ A modern and responsive web application that converts text to speech, allowing u
 
 - Modern browser with Web Speech API support
 - JavaScript enabled
-- Internet connection (to load CDN dependencies)
+- Internet connection (for analytics or remote voice downloads, optional)
 
 ## 🛠️ Technologies Used
 
 - **HTML5**: Semantic structure
 - **CSS3**: Styles with backdrop-filter and gradient support
 - **JavaScript**: Application logic
-- **Tailwind CSS**: Utility-first CSS framework
+- **Tailwind-inspired utilities**: Static subset consolidated in [`assets/tailwind.css`](assets/tailwind.css)
 - **Inline SVG Icons**: Lucide icons embutidos diretamente no markup (sem dependências externas)
 - **Web Speech API**: Native browser speech synthesis
 
 ## 📦 Dependencies
 
-- [Tailwind CSS](https://tailwindcss.com/) - via CDN
+- Static Tailwind utility subset served locally from [`assets/tailwind.css`](assets/tailwind.css)
 
 ## 📈 Analytics & Privacy
 
