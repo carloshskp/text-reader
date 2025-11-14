@@ -5,7 +5,7 @@ Um aplicativo web moderno e responsivo que converte texto em fala, permitindo qu
 ## ✨ Características
 
 - **Leitura de Texto em Voz Alta**: Converte qualquer texto em áudio usando a API Web Speech nativa do navegador
-- **Controle de Velocidade**: Ajuste a velocidade de reprodução de 0.5x a 2.0x para sua conveniência
+- **Controle de Velocidade**: Ajuste a velocidade de reprodução de 0.5x a 2.0x com o slider no desktop ou o seletor em telas móveis
 - **Interface Moderna**: Design limpo e responsivo com gradiente visual atraente
 - **Persistência de Dados**: Salve o texto no navegador para acessá-lo depois
 - **Pausa e Reprodução**: Controle total sobre a reprodução com botões intuitivos
@@ -21,7 +21,7 @@ Um aplicativo web moderno e responsivo que converte texto em fala, permitindo qu
 1. Abra a aplicação no navegador
 2. Digite ou cole o texto que deseja ouvir no campo de texto
 3. Clique no botão **Reproduzir** (▶) para iniciar a leitura
-4. Use o controle deslizante para ajustar a velocidade de reprodução (0.5x a 2.0x)
+4. Use o controle deslizante (desktop/tablet) ou o seletor suspenso (mobile) para ajustar a velocidade de reprodução (0.5x a 2.0x)
 5. Clique no botão **Pausar** (⏸) para pausar a reprodução
 6. Clique no botão **Salvar** (💾) para guardar o texto no navegador
 

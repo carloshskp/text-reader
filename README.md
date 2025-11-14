@@ -5,7 +5,7 @@ A modern and responsive web application that converts text to speech, allowing u
 ## ✨ Features
 
 - **Text-to-Speech**: Convert any text to audio using the browser's native Web Speech API
-- **Speed Control**: Adjust playback speed from 0.5x to 2.0x for your convenience
+- **Speed Control**: Adjust playback speed from 0.5x to 2.0x using a desktop slider or a mobile-friendly drop-down
 - **Modern Interface**: Clean and responsive design with attractive visual gradient
 - **Data Persistence**: Save text in the browser for later access
 - **Play and Pause**: Full control over playback with intuitive buttons
@@ -21,7 +21,7 @@ A modern and responsive web application that converts text to speech, allowing u
 1. Open the application in your browser
 2. Type or paste the text you want to hear in the text field
 3. Click the **Play** button (▶) to start reading
-4. Use the slider to adjust the playback speed (0.5x to 2.0x)
+4. Use the slider (desktop/tablet) or the drop-down select (mobile) to adjust the playback speed (0.5x to 2.0x)
 5. Click the **Pause** button (⏸) to pause playback
 6. Click the **Save** button (💾) to save the text in your browser
 
