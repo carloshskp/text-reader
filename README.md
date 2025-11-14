@@ -10,7 +10,8 @@ A modern and responsive web application that converts text to speech, allowing u
 - **Data Persistence**: Save text in the browser for later access
 - **Play and Pause**: Full control over playback with intuitive buttons
 - **Brazilian Portuguese Support**: Automatic detection and selection of pt-BR voices when available
-- **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
+- **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices, with a full-width layout and tighter spacing on
+  small screens for better readability
 - **Mobile-friendly Controls**: Buttons and slider reorganize on viewports up to 360 px without overflowing the container
 
 ## 🎨 Branding
