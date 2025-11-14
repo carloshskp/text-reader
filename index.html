@@ -188,29 +188,42 @@
     </div>
 
     <div
-      class="w-full px-4 py-3 rounded-lg bg-white/30 backdrop-blur-sm border-2 border-white/50 shadow-xl flex items-center gap-3">
+      class="w-full px-4 py-3 rounded-lg bg-white/30 backdrop-blur-sm border-2 border-white/50 shadow-xl flex flex-wrap sm:flex-nowrap items-center gap-3">
       <button id="btnPlay"
-        class="btn-shine inline-flex items-center justify-center px-4 py-3 rounded-lg bg-white/30 backdrop-blur-sm font-semibold border-2 border-white/50 shadow-xl hover:bg-white/40 hover:shadow-2xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-primary">
+        class="btn-shine inline-flex items-center justify-center px-4 py-3 rounded-lg bg-white/30 backdrop-blur-sm font-semibold border-2 border-white/50 shadow-xl hover:bg-white/40 hover:shadow-2xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-primary flex-1 min-w-[64px] sm:flex-none">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" /></svg>
       </button>
       <button id="btnPause"
-        class="btn-shine inline-flex items-center justify-center px-4 py-3 rounded-lg bg-white/30 backdrop-blur-sm font-semibold border-2 border-white/50 shadow-xl hover:bg-white/40 hover:shadow-2xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-primary"
+        class="btn-shine inline-flex items-center justify-center px-4 py-3 rounded-lg bg-white/30 backdrop-blur-sm font-semibold border-2 border-white/50 shadow-xl hover:bg-white/40 hover:shadow-2xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-primary flex-1 min-w-[64px] sm:flex-none"
         disabled>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="3" width="5" height="18" rx="1" /><rect x="5" y="3" width="5" height="18" rx="1" /></svg>
       </button>
       <button id="btnSave"
-        class="btn-shine inline-flex items-center justify-center px-4 py-3 rounded-lg bg-white/20 backdrop-blur-sm font-semibold border border-white/30 shadow-lg hover:bg-white/30 hover:shadow-xl transition-all duration-200 text-primary disabled:opacity-50 disabled:cursor-not-allowed"
+        class="btn-shine inline-flex items-center justify-center px-4 py-3 rounded-lg bg-white/20 backdrop-blur-sm font-semibold border border-white/30 shadow-lg hover:bg-white/30 hover:shadow-xl transition-all duration-200 text-primary disabled:opacity-50 disabled:cursor-not-allowed flex-1 min-w-[64px] sm:flex-none"
         disabled>
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" /><path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7" /><path d="M7 3v4a1 1 0 0 0 1 1h7" /></svg>
       </button>
       <button id="btnClear"
-        class="btn-shine inline-flex items-center justify-center px-4 py-3 rounded-lg bg-white/20 backdrop-blur-sm font-semibold border border-white/30 shadow-lg hover:bg-white/30 hover:shadow-xl transition-all duration-200 text-primary disabled:opacity-50 disabled:cursor-not-allowed"
+        class="btn-shine inline-flex items-center justify-center px-4 py-3 rounded-lg bg-white/20 backdrop-blur-sm font-semibold border border-white/30 shadow-lg hover:bg-white/30 hover:shadow-xl transition-all duration-200 text-primary disabled:opacity-50 disabled:cursor-not-allowed flex-1 min-w-[64px] sm:flex-none"
         title="Limpar texto">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 11v6" /><path d="M14 11v6" /><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" /><path d="M3 6h18" /><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></svg>
       </button>
-      <div class="flex items-center gap-3 flex-1 min-w-0">
+      <div class="flex items-center gap-3 flex-1 min-w-0 basis-full sm:basis-auto sm:flex-1">
         <span class="font-semibold text-sm whitespace-nowrap text-primary">0.5x</span>
-        <input type="range" id="rate" min="0.5" max="2.0" step="0.1" value="1.0" class="flex-1 min-w-0" />
+        <div class="flex-1 min-w-0">
+          <input type="range" id="rate" min="0.5" max="2.0" step="0.25" value="1.0"
+            class="flex-1 min-w-0 w-full" />
+          <select id="rateSelect"
+            class="hidden w-full rounded-lg bg-white/20 backdrop-blur-sm border border-white/30 px-3 py-2 text-sm font-semibold text-primary focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-200">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="1">1.0x</option>
+            <option value="1.25">1.25x</option>
+            <option value="1.5">1.5x</option>
+            <option value="1.75">1.75x</option>
+            <option value="2">2.0x</option>
+          </select>
+        </div>
         <span class="font-semibold text-sm whitespace-nowrap text-primary">2x</span>
         <span id="rateValue"
           class="font-bold text-sm whitespace-nowrap px-3 py-1 rounded-lg bg-white/50 backdrop-blur-md border border-white/40 text-primary">1.0x</span>
@@ -307,12 +320,66 @@
     const saveBtn = document.getElementById('btnSave');
     const clearBtn = document.getElementById('btnClear');
     const rateSlider = document.getElementById('rate');
+    const rateSelect = document.getElementById('rateSelect');
     const rateValue = document.getElementById('rateValue');
     const donationModal = document.getElementById('donationModal');
+    const narrowViewportQuery = window.matchMedia ? window.matchMedia('(max-width: 639px)') : null;
 
     let isPlaying = false;
     let currentUtterance = null;
     let cachedVoices = [];
+
+    function clampRate(value) {
+      const num = parseFloat(value);
+      if (Number.isNaN(num)) return 1.0;
+      const clamped = Math.min(Math.max(num, 0.5), 2.0);
+      const steps = Math.round((clamped - 0.5) / 0.25);
+      const rounded = 0.5 + steps * 0.25;
+      return parseFloat(rounded.toFixed(2));
+    }
+
+    function formatRateLabel(value) {
+      const num = clampRate(value);
+      const withTwoDecimals = num.toFixed(2).replace(/0$/, '');
+      return (num % 1 === 0 ? num.toFixed(1) : withTwoDecimals) + 'x';
+    }
+
+    function syncRateControls(value, { persist = true, source } = {}) {
+      const normalized = clampRate(value);
+      const normalizedString = normalized.toString();
+
+      if (source !== 'slider' && rateSlider.value !== normalizedString) {
+        rateSlider.value = normalizedString;
+      }
+
+      if (rateSelect && source !== 'select' && rateSelect.value !== normalizedString) {
+        rateSelect.value = normalizedString;
+      }
+
+      rateValue.textContent = formatRateLabel(normalized);
+
+      if (persist) {
+        try {
+          localStorage.setItem(RATE_KEY, normalizedString);
+        } catch (_) { }
+      }
+
+      if (currentUtterance && (synth.speaking || synth.paused)) {
+        if (synth.paused) {
+          currentUtterance.rate = normalized;
+        } else {
+          const text = textEl.value.trim();
+          if (text) {
+            synth.cancel();
+            currentUtterance = createUtterance(text, normalized);
+            synth.speak(currentUtterance);
+            updateButtonsState(true);
+          }
+        }
+      }
+
+      return normalized;
+    }
 
     function initStorage() {
       try {
@@ -320,8 +387,9 @@
         if (saved) textEl.value = saved;
         const savedRate = localStorage.getItem(RATE_KEY);
         if (savedRate) {
-          rateSlider.value = savedRate;
-          rateValue.textContent = parseFloat(savedRate).toFixed(1) + 'x';
+          syncRateControls(savedRate, { persist: false });
+        } else {
+          syncRateControls(rateSlider.value, { persist: false, source: 'slider' });
         }
       } catch (_) { }
     }
@@ -351,7 +419,7 @@
         utter.lang = 'pt-BR';
       }
 
-      utter.rate = parseFloat(rate);
+      utter.rate = clampRate(rate);
       utter.pitch = 1.0;
       utter.volume = 1.0;
 
@@ -486,27 +554,32 @@
       }
     });
 
-    rateSlider.addEventListener('input', (e) => {
-      const value = parseFloat(e.target.value);
-      rateValue.textContent = value.toFixed(1) + 'x';
-      try {
-        localStorage.setItem(RATE_KEY, value.toString());
-      } catch (_) { }
+    if (rateSelect) {
+      rateSelect.addEventListener('change', (e) => {
+        syncRateControls(e.target.value, { source: 'select' });
+      });
+    }
 
-      if (currentUtterance && (synth.speaking || synth.paused)) {
-        if (synth.paused) {
-          currentUtterance.rate = value;
-        } else {
-          const text = textEl.value.trim();
-          if (text) {
-            synth.cancel();
-            currentUtterance = createUtterance(text, value);
-            synth.speak(currentUtterance);
-            updateButtonsState(true);
-          }
-        }
-      }
+    rateSlider.addEventListener('input', (e) => {
+      syncRateControls(e.target.value, { source: 'slider' });
     });
+
+    function toggleRateControlVisibility(query) {
+      if (!rateSelect) return;
+      const useSelect = query.matches;
+      rateSlider.classList.toggle('hidden', useSelect);
+      rateSelect.classList.toggle('hidden', !useSelect);
+    }
+
+    if (narrowViewportQuery && rateSelect) {
+      toggleRateControlVisibility(narrowViewportQuery);
+      const listener = (event) => toggleRateControlVisibility(event);
+      if (typeof narrowViewportQuery.addEventListener === 'function') {
+        narrowViewportQuery.addEventListener('change', listener);
+      } else if (typeof narrowViewportQuery.addListener === 'function') {
+        narrowViewportQuery.addListener(listener);
+      }
+    }
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && !donationModal.classList.contains('opacity-0')) {
