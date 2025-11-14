@@ -169,15 +169,63 @@
 </head>
 
 <body
-  class="min-h-screen antialiased flex items-stretch sm:items-center sm:justify-center px-4 py-6 pb-16 sm:px-6 sm:py-12 sm:pb-24">
+  class="min-h-screen antialiased flex items-stretch sm:items-center sm:justify-center px-4 py-6 pb-32 sm:px-6 sm:py-12 sm:pb-40 lg:pb-48">
   <main
-    class="w-full max-w-full sm:max-w-2xl space-y-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl px-4 py-6 sm:p-8">
-    <header class="flex flex-col sm:flex-row sm:items-center gap-4 text-primary">
-      <img src="assets/logo.svg" alt="Logo Leitor de Texto" class="h-16 w-16 drop-shadow-lg" loading="lazy" />
-      <div class="space-y-1">
-        <h1 class="text-3xl font-bold tracking-tight drop-shadow-lg text-primary">Leitor de texto</h1>
-        <p class="text-sm text-primary opacity-80">Converta textos em voz diretamente no seu navegador.</p>
-      </div>
+    class="w-full max-w-full sm:max-w-2xl space-y-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl px-4 py-6 pb-8 sm:p-8 sm:pb-12">
+    <header class="text-primary space-y-6">
+      <section class="sm:hidden text-center space-y-4">
+        <div class="flex flex-col items-center gap-3">
+          <img src="assets/logo.svg" alt="Logo Leitor de Texto" class="h-20 w-20 drop-shadow-lg" loading="lazy" />
+          <div class="space-y-1">
+            <p class="text-xs uppercase tracking-[0.2em] font-semibold text-primary/70">Leitor de texto</p>
+            <h1 class="text-3xl font-bold tracking-tight drop-shadow-lg text-primary">Converta textos em voz</h1>
+            <p class="text-sm text-primary opacity-80">Transforme qualquer conteúdo escrito em áudio em segundos.</p>
+          </div>
+        </div>
+        <nav class="flex flex-col items-center gap-3 text-sm font-semibold">
+          <a href="https://text-reader.carloshb.com.br/README.pt-BR.md"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/20 backdrop-blur-sm border border-white/30 shadow-lg hover:bg-white/30 transition-all duration-200">
+            Documentação
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path
+                d="m9 18 6-6-6-6" /><path d="M15 12H3" /><path d="M21 5v14" /></svg>
+          </a>
+          <button type="button" data-donation-trigger="true"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/30 shadow-md hover:bg-white/20 transition-all duration-200">
+            Apoie o projeto
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path
+                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></svg>
+          </button>
+        </nav>
+      </section>
+
+      <section class="hidden sm:flex sm:flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <img src="assets/logo.svg" alt="Logo Leitor de Texto" class="h-16 w-16 drop-shadow-lg" loading="lazy" />
+          <div class="space-y-1">
+            <p class="text-xs uppercase tracking-[0.3em] font-semibold text-primary/60">Leitor de texto online</p>
+            <h1 class="text-4xl font-bold tracking-tight drop-shadow-lg text-primary">Ouça seus textos em português</h1>
+            <p class="text-sm text-primary opacity-80">Interface moderna, responsiva e gratuita para transformar texto em voz.</p>
+          </div>
+        </div>
+        <nav class="flex items-center gap-4 text-sm font-semibold">
+          <a href="https://text-reader.carloshb.com.br/README.pt-BR.md"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/20 backdrop-blur-sm border border-white/30 shadow-lg hover:bg-white/30 transition-all duration-200">
+            Documentação
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path
+                d="m9 18 6-6-6-6" /><path d="M15 12H3" /><path d="M21 5v14" /></svg>
+          </a>
+          <button type="button" data-donation-trigger="true"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/30 shadow-md hover:bg-white/20 transition-all duration-200">
+            Apoie o projeto
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path
+                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></svg>
+          </button>
+        </nav>
+      </section>
     </header>
 
     <div class="space-y-2">
@@ -294,7 +342,7 @@
         <div class="text-xs text-primary">
           <p class="inline-flex items-center gap-1">
             Gostou? <a target="_blank" href="https://github.com/carloshskp/text-reader" class="font-semibold hover:opacity-80 underline transition-colors duration-200 text-primary cursor-pointer">contribua</a> ou
-            <a id="donationLink" href="#"
+            <a href="#" data-donation-trigger="true"
               class="font-semibold hover:opacity-80 underline transition-colors duration-200 text-primary cursor-pointer">apoie
               o projeto</a>
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 inline-block" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></svg>
@@ -587,11 +635,15 @@
       }
     });
 
-    const donationLink = document.getElementById('donationLink');
-    if (donationLink) {
-      donationLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        showDonationModal();
+    const donationTriggers = document.querySelectorAll('[data-donation-trigger="true"]');
+    if (donationTriggers.length) {
+      donationTriggers.forEach((trigger) => {
+        trigger.addEventListener('click', (e) => {
+          if (trigger.tagName === 'A') {
+            e.preventDefault();
+          }
+          showDonationModal();
+        });
       });
     }
 
