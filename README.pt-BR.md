@@ -12,6 +12,10 @@ Um aplicativo web moderno e responsivo que converte texto em fala, permitindo qu
 - **Suporte a Português Brasileiro**: Detecção automática e seleção de vozes pt-BR quando disponível
 - **Design Responsivo**: Funciona perfeitamente em desktop, tablet e dispositivos móveis
 
+## 🎨 Identidade Visual
+
+- O logo oficial do projeto está disponível em [`assets/logo.svg`](assets/logo.svg) e é utilizado no cabeçalho do app e como favicon do site.
+
 ## 🚀 Como Usar
 
 1. Abra a aplicação no navegador

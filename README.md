@@ -12,6 +12,10 @@ A modern and responsive web application that converts text to speech, allowing u
 - **Brazilian Portuguese Support**: Automatic detection and selection of pt-BR voices when available
 - **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
 
+## 🎨 Branding
+
+- The official application logo is available at [`assets/logo.svg`](assets/logo.svg) and is used as the in-app badge and site favicon.
+
 ## 🚀 How to Use
 
 1. Open the application in your browser
