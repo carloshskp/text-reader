@@ -11,6 +11,7 @@ Um aplicativo web moderno e responsivo que converte texto em fala, permitindo qu
 - **Pausa e Reprodução**: Controle total sobre a reprodução com botões intuitivos
 - **Suporte a Português Brasileiro**: Detecção automática e seleção de vozes pt-BR quando disponível
 - **Design Responsivo**: Funciona perfeitamente em desktop, tablet e dispositivos móveis
+- **Controles Otimizados para Telas Pequenas**: Botões e controle deslizante se reorganizam em telas de até 360 px sem ultrapassar o container
 
 ## 🎨 Identidade Visual
 
