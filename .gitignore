@@ -1,1 +1,9 @@
 node_modules/
+dist/
+
+.pnp.*
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions

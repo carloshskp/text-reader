@@ -15,7 +15,7 @@ Um aplicativo web moderno e responsivo que converte texto em fala, permitindo qu
 
 ## 🎨 Identidade Visual
 
-- O logo oficial do projeto está disponível em [`assets/logo.svg`](assets/logo.svg) e é utilizado no cabeçalho do app e como favicon do site.
+- O logo oficial do projeto está disponível em [`public/assets/logo.svg`](public/assets/logo.svg) e é utilizado no cabeçalho do app e como favicon do site.
 
 ## 🚀 Como Usar
 
@@ -36,7 +36,7 @@ Um aplicativo web moderno e responsivo que converte texto em fala, permitindo qu
 
 - **HTML5**: Estrutura semântica
 - **CSS3**: Estilos com suporte a backdrop-filter e gradientes
-- **JavaScript**: Lógica de aplicação
+- **TypeScript (ESM)**: Lógica de aplicação compilada para navegadores modernos
 - **Tailwind CSS**: Framework de CSS utilitário
 - **Lucide Icons**: Ícones SVG modernos
 - **Web Speech API**: Síntese de fala nativa do navegador
@@ -48,7 +48,7 @@ Um aplicativo web moderno e responsivo que converte texto em fala, permitindo qu
 
 ## 📈 Métricas e privacidade
 
-- O Google Analytics (GA4) e o Google Tag Manager agora são carregados pelo arquivo [`analytics.js`](analytics.js) com `defer`, substituindo os snippets inline.
+- O Google Analytics (GA4) e o Google Tag Manager agora são carregados pelo arquivo [`analytics.js`](public/analytics.js) com `defer`, substituindo os snippets inline.
 - O script aguarda `requestIdleCallback` ou a primeira interação do usuário (clique, tecla, pointer/touch) antes de injetar os assets do GA/GTM, liberando o caminho crítico de renderização sem perder telemetria.
 - O `<noscript>` do GTM permanece no `<body>` para manter o rastreamento básico quando o JavaScript estiver desabilitado.
 - Se o seu ambiente exigir consentimento explícito, defina `window.APP_ANALYTICS_AUTO_START = false` em um script executado antes do `analytics.js` e chame `window.appAnalytics.init()` quando o consentimento for concedido (ou `window.appAnalytics.enableAutoStart()` para restaurar o agendamento adiado).
@@ -69,6 +69,13 @@ O aplicativo tenta selecionar automaticamente uma voz em português brasileiro (
 - ✅ Safari (versão 14.1+)
 - ✅ Edge (versão 79+)
 - ⚠️ Opera (com suporte parcial)
+
+## 🧑‍💻 Desenvolvimento
+
+- Requer **Node.js >= 22 < 23** e **Yarn 4.10** (via Corepack) para rodar localmente
+- Instale as dependências com `yarn install`
+- Gere os estáticos com `yarn build` (compila o código TypeScript e copia `public/` para `dist/`)
+- Execute a suíte de testes com `yarn test` (Jest configurado com ambiente JSDOM)
 
 ## 📝 Notas
 

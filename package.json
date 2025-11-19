@@ -2,11 +2,25 @@
   "name": "text-reader",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22 <23"
+  },
   "scripts": {
-    "test": "vitest run"
+    "clean": "rm -rf dist",
+    "compile": "tsc --project tsconfig.json",
+    "copy:static": "node ./scripts/copy-static.mjs",
+    "build": "yarn clean && yarn compile && yarn copy:static",
+    "test": "jest"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/jsdom": "^27.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "jsdom": "^24.0.0",
-    "vitest": "^1.5.0"
-  }
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.6.3"
+  },
+  "packageManager": "yarn@4.10.0"
 }

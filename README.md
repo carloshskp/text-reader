@@ -16,7 +16,7 @@ A modern and responsive web application that converts text to speech, allowing u
 
 ## 🎨 Branding
 
-- The official application logo is available at [`assets/logo.svg`](assets/logo.svg) and is used as the in-app badge and site favicon.
+- The official application logo is available at [`public/assets/logo.svg`](public/assets/logo.svg) and is used as the in-app badge and site favicon.
 
 ## 🚀 How to Use
 
@@ -37,7 +37,7 @@ A modern and responsive web application that converts text to speech, allowing u
 
 - **HTML5**: Semantic structure
 - **CSS3**: Styles with backdrop-filter and gradient support
-- **JavaScript**: Application logic
+- **TypeScript (ESM)**: Application logic compiled for modern browsers
 - **Tailwind CSS**: Utility-first CSS framework
 - **Inline SVG Icons**: Lucide icons embutidos diretamente no markup (sem dependências externas)
 - **Web Speech API**: Native browser speech synthesis
@@ -48,7 +48,7 @@ A modern and responsive web application that converts text to speech, allowing u
 
 ## 📈 Analytics & Privacy
 
-- Google Analytics (GA4) and Google Tag Manager now load from the deferred [`analytics.js`](analytics.js) file instead of inline snippets.
+- Google Analytics (GA4) and Google Tag Manager now load from the deferred [`analytics.js`](public/analytics.js) file instead of inline snippets.
 - The script waits for `requestIdleCallback` or the first user interaction (click, key press, pointer/touch) before injecting GA/GTM assets, freeing the critical rendering path while keeping telemetry intact.
 - The GTM `<noscript>` iframe remains in the `<body>` to preserve baseline tracking for users without JavaScript.
 - If your deployment requires explicit consent, set `window.APP_ANALYTICS_AUTO_START = false` in a script that runs before `analytics.js` and call `window.appAnalytics.init()` once consent is granted (or `window.appAnalytics.enableAutoStart()` to re-enable the deferred behaviour).
@@ -73,6 +73,13 @@ The application automatically tries to select a Brazilian Portuguese (pt-BR) voi
 - ✅ Safari (version 14.1+)
 - ✅ Edge (version 79+)
 - ⚠️ Opera (with partial support)
+
+## 🧑‍💻 Development
+
+- Requires **Node.js >= 22 < 23** and **Yarn 4.10** (via Corepack) for local workflows
+- Install dependencies with `yarn install`
+- Build static assets with `yarn build` (compiles the TypeScript sources and copies everything to `dist/`)
+- Run the Jest suite with `yarn test` (uses the JSDOM environment)
 
 ## 📝 Notes
 
