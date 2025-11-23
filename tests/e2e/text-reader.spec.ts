@@ -43,20 +43,22 @@ test.describe('Text Reader E2E Tests', () => {
     expect(relevantErrors.length).toBe(0);
   });
 
-  test('deve carregar analytics.js', async ({ page }) => {
+  test('só carrega analytics.js após consentimento', async ({ page }) => {
     await page.goto('/');
-    
-    // Aguardar carregamento do analytics
-    await page.waitForLoadState('networkidle');
-    
-    // Verificar se o script analytics.js foi carregado
-    const analyticsScript = await page.evaluate(() => {
-      return Array.from(document.querySelectorAll('script')).some(
+
+    const isAnalyticsLoaded = async () => page.evaluate(() => (
+      Array.from(document.querySelectorAll('script')).some(
         (script) => script.src.includes('analytics.js')
-      );
-    });
-    
-    expect(analyticsScript).toBeTruthy();
+      )
+    ));
+
+    await expect(await isAnalyticsLoaded()).toBeFalsy();
+
+    await page.getByRole('button', { name: 'Ativar métricas' }).first().click();
+
+    await page.waitForFunction(() => window.appAnalytics?.isInitialized?.());
+
+    await expect(await isAnalyticsLoaded()).toBeTruthy();
   });
 
   test('deve reproduzir texto quando clicar no botão play', async ({ page }) => {

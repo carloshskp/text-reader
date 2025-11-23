@@ -65,92 +65,6 @@
     }
     </script>
 
-  <link rel="stylesheet" href="/src/styles/main.css">
-  <style>
-    :root {
-      --color-primary: #2c3e50;
-      --color-border: rgba(255, 255, 255, 0.3);
-      --gradient-bg: linear-gradient(135deg, #2ecc71 0%, #3498db 100%);
-    }
-
-    body {
-      background: var(--gradient-bg);
-    }
-
-    .btn-shine {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .btn-shine::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, var(--color-border), transparent);
-      transform: skewX(-25deg);
-      transition: left 0.5s ease;
-    }
-
-    .btn-shine:hover::before {
-      left: 100%;
-    }
-
-    .btn-shine>* {
-      position: relative;
-      z-index: 1;
-    }
-
-    input[type="range"] {
-      -webkit-appearance: none;
-      appearance: none;
-      background: var(--color-primary);
-      cursor: pointer;
-      width: 100%;
-      height: 8px;
-    }
-
-    input[type="range"]::-webkit-slider-track,
-    input[type="range"]::-moz-range-track {
-      background: var(--color-primary);
-      height: 8px;
-      border-radius: 4px;
-      border: 1px solid var(--color-border);
-    }
-
-    input[type="range"]::-webkit-slider-thumb,
-    input[type="range"]::-moz-range-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      background: var(--color-primary);
-      height: 20px;
-      width: 20px;
-      border-radius: 50%;
-      border: 2px solid var(--color-border);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      transition: all 0.2s ease;
-      cursor: pointer;
-    }
-
-    input[type="range"]::-webkit-slider-thumb:hover,
-    input[type="range"]::-moz-range-thumb:hover {
-      transform: scale(1.1);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
-
-    textarea::placeholder {
-      color: var(--color-primary);
-      opacity: 0.6;
-    }
-
-    button:disabled,
-    input:disabled,
-    textarea:disabled {
-      cursor: not-allowed !important;
-    }
-  </style>
 </head>
 
 <body
@@ -264,6 +178,28 @@
 
   <div id="toast" class="fixed inset-x-0 top-4 flex justify-center pointer-events-none z-50"></div>
 
+  <section class="fixed inset-x-0 bottom-24 sm:bottom-28 px-4 sm:px-6 z-40 flex justify-center hidden" data-analytics-consent>
+    <div
+      class="w-full sm:max-w-2xl bg-white/95 text-primary border border-white/60 rounded-xl shadow-2xl px-4 py-4 sm:px-6 sm:py-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <div class="space-y-1 text-sm sm:text-base">
+        <p class="font-semibold">Controle de métricas</p>
+        <p class="text-primary/80">Ative o Google Tag Manager apenas se concordar em compartilhar dados anônimos de uso.</p>
+      </div>
+      <div class="flex items-center gap-3 justify-end">
+        <button type="button"
+          class="px-4 py-2 rounded-lg bg-white text-primary border border-primary/20 hover:bg-primary hover:text-white transition-all"
+          data-analytics-deny>
+          Agora não
+        </button>
+        <button type="button"
+          class="px-4 py-2 rounded-lg bg-gradient-to-r from-gradient-start to-gradient-end text-white font-semibold shadow-lg hover:opacity-95 transition-opacity"
+          data-analytics-allow>
+          Ativar métricas
+        </button>
+      </div>
+    </div>
+  </section>
+
   <footer class="fixed bottom-0 left-0 right-0 z-40 flex justify-center p-4">
     <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-2xl w-full px-4 py-4 sm:px-6 sm:max-w-2xl">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
@@ -285,6 +221,20 @@
       </div>
     </div>
   </footer>
+
+  <div class="fixed bottom-2 right-3 sm:right-6 z-50 flex justify-end">
+    <button type="button"
+      class="text-xs sm:text-sm inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/80 backdrop-blur border border-white/60 shadow-lg text-primary font-semibold hover:bg-white"
+      data-analytics-manage>
+      Ativar métricas
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="2" x2="22" y1="12" y2="12"></line>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10"></path>
+      </svg>
+    </button>
+  </div>
 
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5CK6BH8" height="0" width="0"
