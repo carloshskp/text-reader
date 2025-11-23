@@ -19,7 +19,7 @@
   <link rel="canonical" href="https://text-reader.carloshb.com.br" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
 
   <!-- Open Graph Tags -->
   <meta property="og:type" content="website" />
@@ -55,7 +55,7 @@
       "featureList": [
         "Síntese de fala em português brasileiro (pt-BR)",
         "Controle de velocidade de reprodução (0.5x a 2.0x)",
-        "Pausa e retomada de reprodução",
+        "Parada de reprodução",
         "Salvamento de texto no navegador",
         "Interface responsiva e moderna"
       ],
@@ -65,22 +65,7 @@
     }
     </script>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'gradient-start': '#2ecc71',
-            'gradient-end': '#3498db',
-            'text-primary': '#2c3e50',
-          }
-        }
-      }
-    }
-  </script>
-  <!-- Google Analytics & GTM (adiado para thread ociosa ou interação) -->
-  <script defer src="./analytics.js"></script>
+  <link rel="stylesheet" href="/src/styles/main.css">
   <style>
     :root {
       --color-primary: #2c3e50;
@@ -190,13 +175,6 @@
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path
                 d="m9 18 6-6-6-6" /><path d="M15 12H3" /><path d="M21 5v14" /></svg>
           </a>
-          <button type="button" data-donation-trigger="true"
-            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/30 shadow-md hover:bg-white/20 transition-all duration-200">
-            Apoie o projeto
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="16" height="16" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path
-                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></svg>
-          </button>
         </nav>
       </section>
 
@@ -217,13 +195,6 @@
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path
                 d="m9 18 6-6-6-6" /><path d="M15 12H3" /><path d="M21 5v14" /></svg>
           </a>
-          <button type="button" data-donation-trigger="true"
-            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/30 shadow-md hover:bg-white/20 transition-all duration-200">
-            Apoie o projeto
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" width="16" height="16" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path
-                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></svg>
-          </button>
         </nav>
       </section>
     </header>
@@ -241,10 +212,10 @@
         class="btn-shine inline-flex items-center justify-center px-4 py-3 rounded-lg bg-white/30 backdrop-blur-sm font-semibold border-2 border-white/50 shadow-xl hover:bg-white/40 hover:shadow-2xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-primary flex-1 min-w-[64px] sm:flex-none">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" /></svg>
       </button>
-      <button id="btnPause"
+      <button id="btnStop"
         class="btn-shine inline-flex items-center justify-center px-4 py-3 rounded-lg bg-white/30 backdrop-blur-sm font-semibold border-2 border-white/50 shadow-xl hover:bg-white/40 hover:shadow-2xl transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-primary flex-1 min-w-[64px] sm:flex-none"
         disabled>
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="3" width="5" height="18" rx="1" /><rect x="5" y="3" width="5" height="18" rx="1" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="1" /></svg>
       </button>
       <button id="btnSave"
         class="btn-shine inline-flex items-center justify-center px-4 py-3 rounded-lg bg-white/20 backdrop-blur-sm font-semibold border border-white/30 shadow-lg hover:bg-white/30 hover:shadow-xl transition-all duration-200 text-primary disabled:opacity-50 disabled:cursor-not-allowed flex-1 min-w-[64px] sm:flex-none"
@@ -293,43 +264,6 @@
 
   <div id="toast" class="fixed inset-x-0 top-4 flex justify-center pointer-events-none z-50"></div>
 
-  <!-- Modal de Doação -->
-  <div id="donationModal"
-    class="hidden inset-0 z-50 flex items-center justify-center p-4 pointer-events-none opacity-0 transition-opacity duration-300">
-    <div class="fixed inset-0 bg-black/40 backdrop-blur-sm" onclick="closeDonationModal()"></div>
-    <div
-      class="relative bg-white/75 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl p-8 max-w-md w-full pointer-events-auto transform scale-95 transition-transform duration-300">
-      <button onclick="closeDonationModal()"
-        class="absolute top-4 right-4 text-primary hover:opacity-70 transition-opacity">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
-      </button>
-      <div class="text-center space-y-4">
-        <div class="flex justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-primary" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></svg>
-        </div>
-        <div class="flex justify-center">
-          <div id="qrCodePlaceholder"
-            class="w-48 h-48 bg-white/20 backdrop-blur-sm border-2 border-white/30 rounded-lg flex items-center justify-center p-3 overflow-hidden">
-            <span class="sr-only">QR Code do PIX</span>
-            <div aria-hidden="true" class="w-full h-full rounded-md border border-dashed border-white/40 flex items-center justify-center text-xs font-semibold text-primary/70">
-              QR Code
-            </div>
-          </div>
-        </div>
-        <h2 class="text-2xl font-bold text-primary">Gostou do Leitor de Texto?</h2>
-        <p class="text-sm text-primary opacity-90">
-          Se este projeto foi útil para você, considere fazer uma doação para apoiar o desenvolvimento contínuo.
-        </p>
-        <div class="flex justify-center pt-2">
-          <button onclick="closeDonationModal()"
-            class="btn-shine inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-white/20 backdrop-blur-sm font-semibold border border-white/30 shadow-lg hover:bg-white/30 hover:shadow-xl transition-all duration-200 text-primary">
-            Talvez Depois
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <footer class="fixed bottom-0 left-0 right-0 z-40 flex justify-center p-4">
     <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-2xl w-full px-4 py-4 sm:px-6 sm:max-w-2xl">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
@@ -357,297 +291,7 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <script>
-    const STORAGE_KEY = 'demo_tts_text';
-    const RATE_KEY = 'demo_tts_rate';
-
-    const synth = window.speechSynthesis;
-    const textEl = document.getElementById('text');
-    const playBtn = document.getElementById('btnPlay');
-    const pauseBtn = document.getElementById('btnPause');
-    const saveBtn = document.getElementById('btnSave');
-    const clearBtn = document.getElementById('btnClear');
-    const rateSlider = document.getElementById('rate');
-    const rateSelect = document.getElementById('rateSelect');
-    const rateValue = document.getElementById('rateValue');
-    const donationModal = document.getElementById('donationModal');
-    const narrowViewportQuery = window.matchMedia ? window.matchMedia('(max-width: 639px)') : null;
-
-    let isPlaying = false;
-    let currentUtterance = null;
-    let cachedVoices = [];
-
-    function clampRate(value) {
-      const num = parseFloat(value);
-      if (Number.isNaN(num)) return 1.0;
-      const clamped = Math.min(Math.max(num, 0.5), 2.0);
-      const steps = Math.round((clamped - 0.5) / 0.25);
-      const rounded = 0.5 + steps * 0.25;
-      return parseFloat(rounded.toFixed(2));
-    }
-
-    function formatRateLabel(value) {
-      const num = clampRate(value);
-      const withTwoDecimals = num.toFixed(2).replace(/0$/, '');
-      return (num % 1 === 0 ? num.toFixed(1) : withTwoDecimals) + 'x';
-    }
-
-    function syncRateControls(value, { persist = true, source } = {}) {
-      const normalized = clampRate(value);
-      const normalizedString = normalized.toString();
-
-      if (source !== 'slider' && rateSlider.value !== normalizedString) {
-        rateSlider.value = normalizedString;
-      }
-
-      if (rateSelect && source !== 'select' && rateSelect.value !== normalizedString) {
-        rateSelect.value = normalizedString;
-      }
-
-      rateValue.textContent = formatRateLabel(normalized);
-
-      if (persist) {
-        try {
-          localStorage.setItem(RATE_KEY, normalizedString);
-        } catch (_) { }
-      }
-
-      if (currentUtterance && (synth.speaking || synth.paused)) {
-        if (synth.paused) {
-          currentUtterance.rate = normalized;
-        } else {
-          const text = textEl.value.trim();
-          if (text) {
-            synth.cancel();
-            currentUtterance = createUtterance(text, normalized);
-            synth.speak(currentUtterance);
-            updateButtonsState(true);
-          }
-        }
-      }
-
-      return normalized;
-    }
-
-    function initStorage() {
-      try {
-        const saved = localStorage.getItem(STORAGE_KEY);
-        if (saved) textEl.value = saved;
-        const savedRate = localStorage.getItem(RATE_KEY);
-        if (savedRate) {
-          syncRateControls(savedRate, { persist: false });
-        } else {
-          syncRateControls(rateSlider.value, { persist: false, source: 'slider' });
-        }
-      } catch (_) { }
-    }
-
-    function cacheVoices() {
-      const voices = synth.getVoices();
-      if (voices && voices.length) cachedVoices = voices;
-    }
-
-    function pickPtVoice() {
-      if (!cachedVoices.length) return null;
-      return (
-        cachedVoices.find(v => /pt-BR/i.test(v.lang)) ||
-        cachedVoices.find(v => /^pt/i.test(v.lang)) ||
-        null
-      );
-    }
-
-    function createUtterance(text, rate) {
-      const utter = new SpeechSynthesisUtterance(text);
-      const voice = pickPtVoice();
-
-      if (voice) {
-        utter.voice = voice;
-        utter.lang = voice.lang;
-      } else {
-        utter.lang = 'pt-BR';
-      }
-
-      utter.rate = clampRate(rate);
-      utter.pitch = 1.0;
-      utter.volume = 1.0;
-
-      return utter;
-    }
-
-    initStorage();
-    cacheVoices();
-    synth.onvoiceschanged = cacheVoices;
-
-    function toast(msg) {
-      const host = document.getElementById('toast');
-      const el = document.createElement('div');
-      el.className =
-        "pointer-events-auto bg-white/95 backdrop-blur-md text-slate-900 border border-white/30 rounded-lg px-5 py-3 shadow-2xl font-medium animate-in fade-in slide-in-from-top-2 duration-300";
-      el.textContent = msg;
-      host.appendChild(el);
-      setTimeout(() => {
-        el.classList.add('opacity-0', 'transition-all', 'duration-300');
-        setTimeout(() => host.removeChild(el), 300);
-      }, 2000);
-    }
-
-    function updateButtonsState(playing) {
-      isPlaying = playing;
-      playBtn.disabled = playing;
-      pauseBtn.disabled = !playing;
-      if (typeof clearBtn !== 'undefined' && clearBtn !== null) {
-        // Clear button is enabled only when there is no active playback
-        clearBtn.disabled = playing;
-      }
-    }
-
-    function showDonationModal() {
-      if (!donationModal.dataset.qrLoaded) {
-        const placeholder = document.getElementById('qrCodePlaceholder');
-        if (placeholder) {
-          const qrImg = document.createElement('img');
-          qrImg.src = 'assets/qr-code.svg';
-          qrImg.alt = 'QR Code para doações via PIX';
-          qrImg.loading = 'lazy';
-          qrImg.decoding = 'async';
-          qrImg.width = 192;
-          qrImg.height = 192;
-          qrImg.className = 'max-w-full max-h-full';
-          placeholder.replaceChildren(qrImg);
-          donationModal.dataset.qrLoaded = 'true';
-        }
-      }
-      donationModal.classList.remove('opacity-0', 'pointer-events-none', 'hidden');
-      donationModal.classList.add('opacity-100', 'fixed');
-      const overlay = donationModal.firstElementChild;
-      if (overlay) overlay.style.pointerEvents = 'auto';
-      const modalContent = donationModal.querySelector('.relative');
-      if (modalContent) {
-        modalContent.style.pointerEvents = 'auto';
-        modalContent.classList.remove('scale-95');
-        modalContent.classList.add('scale-100');
-      }
-    }
-
-    function closeDonationModal() {
-      donationModal.classList.remove('opacity-100', 'fixed');
-      donationModal.classList.add('pointer-events-none', 'opacity-0', 'hidden');
-      const overlay = donationModal.firstElementChild;
-      if (overlay) overlay.style.pointerEvents = 'none';
-      const modalContent = donationModal.querySelector('.relative');
-      if (modalContent) {
-        modalContent.style.pointerEvents = 'none';
-        modalContent.classList.add('scale-95');
-        modalContent.classList.remove('scale-100');
-      }
-    }
-
-    window.closeDonationModal = closeDonationModal;
-    window.showDonationModal = showDonationModal;
-
-    function speakText(text) {
-      currentUtterance = createUtterance(text, rateSlider.value);
-      synth.speak(currentUtterance);
-
-      setTimeout(() => {
-        if (synth.speaking) {
-          updateButtonsState(true);
-        }
-      }, 100);
-
-      currentUtterance.onend = () => {
-        updateButtonsState(false);
-        currentUtterance = null;
-        setTimeout(() => showDonationModal(), 500);
-      };
-
-      currentUtterance.onerror = () => {
-        updateButtonsState(false);
-        currentUtterance = null;
-        toast('Não foi possível sintetizar a fala.');
-      };
-    }
-
-    playBtn.addEventListener('click', () => {
-      const text = textEl.value.trim();
-      if (!text) return toast('Digite um texto para reproduzir.');
-      if (synth.speaking || synth.pending) {
-        synth.cancel();
-      }
-      speakText(text);
-    });
-
-    // Limpar texto: limpa o textarea e foca nele. Só habilitado quando não há reprodução ativa.
-    if (clearBtn) {
-      clearBtn.addEventListener('click', () => {
-        try {
-          textEl.value = '';
-          // Atualiza armazenamento local para manter consistência
-          try { localStorage.setItem(STORAGE_KEY, ''); } catch (_) { }
-          textEl.focus();
-          toast('Texto limpo.');
-        } catch (err) {
-          console.error('Erro ao limpar o texto', err);
-        }
-      });
-    }
-
-    pauseBtn.addEventListener('click', () => {
-      if (synth.speaking) {
-        synth.pause();
-        updateButtonsState(false);
-      } else if (synth.paused) {
-        synth.resume();
-        updateButtonsState(true);
-      }
-    });
-
-    if (rateSelect) {
-      rateSelect.addEventListener('change', (e) => {
-        syncRateControls(e.target.value, { source: 'select' });
-      });
-    }
-
-    rateSlider.addEventListener('input', (e) => {
-      syncRateControls(e.target.value, { source: 'slider' });
-    });
-
-    function toggleRateControlVisibility(query) {
-      if (!rateSelect) return;
-      const useSelect = query.matches;
-      rateSlider.classList.toggle('hidden', useSelect);
-      rateSelect.classList.toggle('hidden', !useSelect);
-    }
-
-    if (narrowViewportQuery && rateSelect) {
-      toggleRateControlVisibility(narrowViewportQuery);
-      const listener = (event) => toggleRateControlVisibility(event);
-      if (typeof narrowViewportQuery.addEventListener === 'function') {
-        narrowViewportQuery.addEventListener('change', listener);
-      } else if (typeof narrowViewportQuery.addListener === 'function') {
-        narrowViewportQuery.addListener(listener);
-      }
-    }
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !donationModal.classList.contains('opacity-0')) {
-        closeDonationModal();
-      }
-    });
-
-    const donationTriggers = document.querySelectorAll('[data-donation-trigger="true"]');
-    if (donationTriggers.length) {
-      donationTriggers.forEach((trigger) => {
-        trigger.addEventListener('click', (e) => {
-          if (trigger.tagName === 'A') {
-            e.preventDefault();
-          }
-          showDonationModal();
-        });
-      });
-    }
-
-  </script>
+  <script type="module" src="/src/main.ts"></script>
 </body>
 
 </html>
