@@ -1,1 +1,13 @@
 node_modules/
+dist/
+
+.pnp.*
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# Test outputs
+playwright-report/
+test-results/

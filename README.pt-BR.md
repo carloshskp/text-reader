@@ -8,14 +8,14 @@ Um aplicativo web moderno e responsivo que converte texto em fala, permitindo qu
 - **Controle de Velocidade**: Ajuste a velocidade de reprodução de 0.5x a 2.0x com o slider no desktop ou o seletor em telas móveis
 - **Interface Moderna**: Design limpo e responsivo com gradiente visual atraente
 - **Persistência de Dados**: Salve o texto no navegador para acessá-lo depois
-- **Pausa e Reprodução**: Controle total sobre a reprodução com botões intuitivos
+- **Parada e Reprodução**: Controle total sobre a reprodução com botões intuitivos
 - **Suporte a Português Brasileiro**: Detecção automática e seleção de vozes pt-BR quando disponível
 - **Design Responsivo**: Funciona perfeitamente em desktop, tablet e dispositivos móveis, usando layout em tela cheia e espaça
   mentos otimizados em telas pequenas para facilitar a leitura
 
 ## 🎨 Identidade Visual
 
-- O logo oficial do projeto está disponível em [`assets/logo.svg`](assets/logo.svg) e é utilizado no cabeçalho do app e como favicon do site.
+- O logo oficial do projeto está disponível em [`public/assets/logo.svg`](public/assets/logo.svg) e é utilizado no cabeçalho do app e como favicon do site.
 
 ## 🚀 Como Usar
 
@@ -23,32 +23,43 @@ Um aplicativo web moderno e responsivo que converte texto em fala, permitindo qu
 2. Digite ou cole o texto que deseja ouvir no campo de texto
 3. Clique no botão **Reproduzir** (▶) para iniciar a leitura
 4. Use o controle deslizante (desktop/tablet) ou o seletor suspenso (mobile) para ajustar a velocidade de reprodução (0.5x a 2.0x)
-5. Clique no botão **Pausar** (⏸) para pausar a reprodução
+5. Clique no botão **Parar** (⏹) para parar a reprodução
 6. Clique no botão **Salvar** (💾) para guardar o texto no navegador
 
 ## 📋 Requisitos
 
 - Navegador moderno com suporte à Web Speech API
 - JavaScript habilitado
-- Conexão de internet (para carregar as dependências de CDN)
 
 ## 🛠️ Tecnologias Utilizadas
 
 - **HTML5**: Estrutura semântica
 - **CSS3**: Estilos com suporte a backdrop-filter e gradientes
-- **JavaScript**: Lógica de aplicação
-- **Tailwind CSS**: Framework de CSS utilitário
-- **Lucide Icons**: Ícones SVG modernos
+- **TypeScript (ESM)**: Lógica de aplicação compilada para navegadores modernos
+- **Vite**: Ferramenta de build e servidor de desenvolvimento
+- **Tailwind CSS**: Framework de CSS utilitário (instalado via npm)
+- **PostCSS**: Processamento e transformação de CSS
+- **Ícones SVG Inline**: Ícones embutidos diretamente no markup (sem dependências externas)
 - **Web Speech API**: Síntese de fala nativa do navegador
+- **Jest**: Framework de testes unitários
+- **Playwright**: Framework de testes end-to-end
 
 ## 📦 Dependências
 
-- [Tailwind CSS](https://tailwindcss.com/) - via CDN
-- [Lucide Icons](https://lucide.dev/) - via CDN
+Este projeto utiliza ferramentas modernas de build e dependências de desenvolvimento. Para usuários finais, nenhuma instalação é necessária - a aplicação roda diretamente no navegador.
+
+### Dependências de Desenvolvimento
+
+- **Vite**: Ferramenta de build e servidor de desenvolvimento
+- **TypeScript**: JavaScript com tipagem estática
+- **Tailwind CSS**: Framework de CSS utilitário
+- **PostCSS**: Processamento de CSS
+- **Jest**: Framework de testes unitários
+- **Playwright**: Framework de testes end-to-end
 
 ## 📈 Métricas e privacidade
 
-- O Google Analytics (GA4) e o Google Tag Manager agora são carregados pelo arquivo [`analytics.js`](analytics.js) com `defer`, substituindo os snippets inline.
+- O Google Analytics (GA4) e o Google Tag Manager agora são carregados pelo arquivo [`analytics.js`](public/analytics.js) com `defer`, substituindo os snippets inline.
 - O script aguarda `requestIdleCallback` ou a primeira interação do usuário (clique, tecla, pointer/touch) antes de injetar os assets do GA/GTM, liberando o caminho crítico de renderização sem perder telemetria.
 - O `<noscript>` do GTM permanece no `<body>` para manter o rastreamento básico quando o JavaScript estiver desabilitado.
 - Se o seu ambiente exigir consentimento explícito, defina `window.APP_ANALYTICS_AUTO_START = false` em um script executado antes do `analytics.js` e chame `window.appAnalytics.init()` quando o consentimento for concedido (ou `window.appAnalytics.enableAutoStart()` para restaurar o agendamento adiado).
@@ -70,11 +81,53 @@ O aplicativo tenta selecionar automaticamente uma voz em português brasileiro (
 - ✅ Edge (versão 79+)
 - ⚠️ Opera (com suporte parcial)
 
+## 🧑‍💻 Desenvolvimento
+
+### Requisitos
+
+- **Node.js >= 22 < 23**
+- **Yarn 4.10** (via Corepack)
+
+### Configuração
+
+1. Instale as dependências:
+   ```bash
+   yarn install
+   ```
+
+2. Inicie o servidor de desenvolvimento:
+   ```bash
+   yarn dev
+   ```
+   A aplicação estará disponível em `http://localhost:5173`
+
+### Scripts Disponíveis
+
+- `yarn dev` - Inicia o servidor de desenvolvimento do Vite
+- `yarn build` - Gera os assets de produção (compila TypeScript e processa CSS com Vite)
+- `yarn preview` - Visualiza o build de produção localmente
+- `yarn test` - Executa todos os testes (unitários e e2e)
+- `yarn test:unit` - Executa testes unitários com Jest (usa ambiente JSDOM)
+- `yarn test:e2e` - Executa testes end-to-end com Playwright
+- `yarn test:e2e:ui` - Executa testes do Playwright com modo UI
+
+### Estrutura do Projeto
+
+```
+src/
+├── app/          # Lógica principal da aplicação
+├── core/         # Lógica de negócio (ex.: cálculos de velocidade)
+├── utils/        # Funções utilitárias (ex.: helpers de armazenamento)
+├── styles/       # Estilos CSS
+└── main.ts       # Ponto de entrada da aplicação
+```
+
 ## 📝 Notas
 
 - A qualidade da voz depende das vozes disponíveis no seu sistema operacional
 - Alguns navegadores podem ter limitações no comprimento do texto para síntese de fala
 - A velocidade de reprodução pode variar dependendo do navegador e do sistema operacional
+- Os ícones são renderizados inline como SVG, eliminando dependências externas
 - O rodapé fixo agora ocupa toda a largura em telas pequenas, garantindo botões acessíveis em dispositivos móveis
 
 ## 💖 Modal de Doação
