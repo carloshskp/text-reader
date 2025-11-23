@@ -1,26 +1,61 @@
 {
   "name": "text-reader",
   "version": "1.0.0",
-  "private": true,
+  "description": "A modern and responsive web application that converts text to speech, allowing users to hear any text aloud with full control over playback speed.",
+  "private": false,
   "type": "module",
+  "keywords": [
+    "text-to-speech",
+    "tts",
+    "speech synthesis",
+    "web app",
+    "browser",
+    "vite",
+    "typescript",
+    "tailwindcss",
+    "postcss",
+    "modern",
+    "responsive",
+    "accessibility",
+    "voice",
+    "audio",
+    "localStorage",
+    "playback speed",
+    "pwa",
+    "offline",
+    "browser api",
+    "web speech api",
+    "jsdom",
+    "jest",
+    "playwright"
+  ],
   "engines": {
     "node": ">=22 <23"
   },
   "scripts": {
-    "clean": "rm -rf dist",
-    "compile": "tsc --project tsconfig.json",
-    "copy:static": "node ./scripts/copy-static.mjs",
-    "build": "yarn clean && yarn compile && yarn copy:static",
-    "test": "jest"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:unit": "jest",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test": "yarn test:unit && yarn test:e2e"
   },
   "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@tailwindcss/postcss": "^4.1.17",
     "@types/jest": "^29.5.12",
     "@types/jsdom": "^27.0.0",
+    "autoprefixer": "^10.4.22",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jsdom": "^24.0.0",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^4.1.17",
     "ts-jest": "^29.2.5",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "vite": "^7.2.4"
   },
   "packageManager": "yarn@4.10.0"
 }
