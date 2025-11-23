@@ -59,10 +59,10 @@ Este projeto utiliza ferramentas modernas de build e dependências de desenvolvi
 
 ## 📈 Métricas e privacidade
 
-- O Google Analytics (GA4) e o Google Tag Manager agora são carregados pelo arquivo [`analytics.js`](public/analytics.js) com `defer`, substituindo os snippets inline.
-- O script aguarda `requestIdleCallback` ou a primeira interação do usuário (clique, tecla, pointer/touch) antes de injetar os assets do GA/GTM, liberando o caminho crítico de renderização sem perder telemetria.
+- O Google Analytics (GA4) e o Google Tag Manager agora são opt-in e só carregam após o visitante aceitar a coleta de métricas pelo controle "Ativar métricas" na interface. A preferência fica salva no `localStorage`.
+- O bundle [`analytics.js`](public/analytics.js) é injetado de forma preguiçosa após o consentimento e iniciado programaticamente via `window.appAnalytics.init()`, mantendo-o fora do caminho crítico de renderização por padrão.
 - O `<noscript>` do GTM permanece no `<body>` para manter o rastreamento básico quando o JavaScript estiver desabilitado.
-- Se o seu ambiente exigir consentimento explícito, defina `window.APP_ANALYTICS_AUTO_START = false` em um script executado antes do `analytics.js` e chame `window.appAnalytics.init()` quando o consentimento for concedido (ou `window.appAnalytics.enableAutoStart()` para restaurar o agendamento adiado).
+- Para reabilitar o agendamento automático em outro cenário, defina `window.APP_ANALYTICS_AUTO_START = true` antes de carregar o `analytics.js` ou chame `window.appAnalytics.enableAutoStart()` após o bundle estar disponível.
 - Após o deploy, valide que os eventos continuam chegando ao GA/GTM (ex.: modo preview do GTM ou painel em tempo real do GA) e repita o teste no PageSpeed Insights para comparar com a linha de base anterior.
 
 ## 💾 Armazenamento Local
