@@ -1,11 +1,7 @@
-name: Test Unit
+name: Test E2E
 
 on:
   push:
-    branches:
-      - main
-      - master
-  pull_request:
     branches:
       - main
       - master
@@ -14,8 +10,8 @@ permissions:
   contents: read
 
 jobs:
-  test-unit:
-    name: Test Unit
+  test-e2e:
+    name: Test E2E
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -32,6 +28,9 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Run unit tests
-        run: yarn test:unit
+      - name: Install Playwright browsers
+        run: yarn playwright install --with-deps chromium
+
+      - name: Run E2E tests
+        run: yarn test:e2e
 
