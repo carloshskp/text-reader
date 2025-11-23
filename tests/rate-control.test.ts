@@ -8,7 +8,7 @@ import { TextDecoder, TextEncoder } from 'node:util';
 (global as any).TextDecoder = TextDecoder;
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const { JSDOM } = require('jsdom');
+const { JSDOM, VirtualConsole } = require('jsdom');
 
 const htmlPath = path.resolve(__dirname, '../public/index.html');
 const rawHtml = fs.readFileSync(htmlPath, 'utf8');
@@ -21,10 +21,11 @@ interface DomOptions {
 
 async function createDom({ matches = false, initialRate }: DomOptions = {}) {
   const dom = new JSDOM(sanitizedHtml, {
-    url: 'https://text-reader.test',
+    url: 'http://localhost',
     pretendToBeVisual: true,
     runScripts: 'dangerously',
     resources: 'usable',
+    virtualConsole: new VirtualConsole().sendTo(console, { omitJSDOMErrors: true }),
     beforeParse(window: Window & typeof globalThis) {
       const typedWindow = window as Window & typeof globalThis & { __matchMediaInstances?: any[] };
       typedWindow.localStorage.clear();

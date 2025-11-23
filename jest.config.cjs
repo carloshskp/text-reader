@@ -3,6 +3,9 @@ module.exports = {
   verbose: true,
   testEnvironment: 'jsdom',
   roots: ['<rootDir>/tests'],
+  testMatch: ['**/*.test.ts', '**/*.test.tsx'],
+  testPathIgnorePatterns: ['/node_modules/', '/e2e/'],
+  setupFilesAfterEnv: ['<rootDir>/tests/setup.ts'],
   transform: {
     '^.+\\.(ts|tsx)$': [
       'ts-jest',
