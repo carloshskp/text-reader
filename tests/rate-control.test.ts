@@ -1,5 +1,6 @@
 import { TextReaderApp } from '../src/app/textReaderApp.js';
 import { clampRate, formatRateLabel } from '../src/core/rate.js';
+import { I18n } from '../src/utils/i18n.js';
 import fs from 'node:fs';
 import path from 'node:path';
 import { TextDecoder, TextEncoder } from 'node:util';
@@ -115,7 +116,8 @@ async function createDom({ matches = false, initialRate }: DomOptions = {}) {
     }
   });
 
-  const app = new TextReaderApp({ window: dom.window as unknown as Window, document: dom.window.document });
+  const i18n = new I18n('pt-BR');
+  const app = new TextReaderApp({ window: dom.window as unknown as Window, document: dom.window.document, i18n });
   app.init();
   await new Promise((resolve) => dom.window.requestAnimationFrame(() => resolve(null)));
 
