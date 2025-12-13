@@ -1,4 +1,5 @@
 import { clampRate, formatRateLabel } from '../core/rate.js';
+import { I18n, detectLocale } from '../utils/i18n.js';
 import { readFromStorage, writeToStorage } from '../utils/storage.js';
 
 const STORAGE_KEY = 'demo_tts_text';
@@ -7,6 +8,7 @@ const RATE_KEY = 'demo_tts_rate';
 export interface AppDependencies {
   window: Window;
   document: Document;
+  i18n: I18n;
 }
 
 export class TextReaderApp {
@@ -23,12 +25,15 @@ export class TextReaderApp {
   private readonly narrowViewportQuery: MediaQueryList | null;
   private pageLoaded = false;
 
+  private readonly i18n: I18n;
+
   private isPlaying = false;
   private currentUtterance: SpeechSynthesisUtterance | null = null;
   private cachedVoices: SpeechSynthesisVoice[] = [];
 
   constructor(private readonly deps: AppDependencies) {
-    const { window, document } = deps;
+    const { window, document, i18n } = deps;
+    this.i18n = i18n;
     this.synth = window.speechSynthesis;
 
     this.textArea = document.getElementById('text') as HTMLTextAreaElement;
@@ -164,7 +169,7 @@ export class TextReaderApp {
   private handlePlay(): void {
     const text = this.textArea.value.trim();
     if (!text) {
-      this.toast('Digite um texto para reproduzir.');
+      this.toast(this.i18n.t('toast.empty'));
       return;
     }
 
@@ -190,13 +195,13 @@ export class TextReaderApp {
     writeToStorage(STORAGE_KEY, '', this.deps.window.localStorage);
     this.updateActionButtons();
     this.textArea.focus();
-    this.toast('Texto limpo.');
+    this.toast(this.i18n.t('toast.cleared'));
   }
 
   private handleSave(): void {
     const text = this.textArea.value.trim();
     writeToStorage(STORAGE_KEY, text, this.deps.window.localStorage);
-    this.toast('Texto salvo com sucesso.');
+    this.toast(this.i18n.t('toast.saved'));
   }
 
   private handleTextChange(): void {
@@ -231,7 +236,7 @@ export class TextReaderApp {
     this.currentUtterance.onerror = () => {
       this.updateButtonsState(false);
       this.currentUtterance = null;
-      this.toast('Não foi possível sintetizar a fala.');
+      this.toast(this.i18n.t('toast.error'));
     };
   }
 
@@ -346,23 +351,23 @@ export class TextReaderApp {
     const qrPlaceholder = this.deps.document.createElement('div');
     qrPlaceholder.id = 'qrCodePlaceholder';
     qrPlaceholder.className = 'w-48 h-48 bg-white/20 backdrop-blur-sm border-2 border-white/30 rounded-lg flex items-center justify-center p-3 overflow-hidden';
-    qrPlaceholder.innerHTML = '<span class="sr-only">QR Code do PIX</span><div aria-hidden="true" class="w-full h-full rounded-md border border-dashed border-white/40 flex items-center justify-center text-xs font-semibold text-primary/70">QR Code</div>';
+    qrPlaceholder.innerHTML = `<span class="sr-only">${this.i18n.t('donation.qrAlt')}</span><div aria-hidden="true" class="w-full h-full rounded-md border border-dashed border-white/40 flex items-center justify-center text-xs font-semibold text-primary/70">${this.i18n.t('donation.qrLabel')}</div>`;
     qrContainer.appendChild(qrPlaceholder);
 
     const title = this.deps.document.createElement('h2');
     title.className = 'text-2xl font-bold text-primary';
-    title.textContent = 'Gostou do Leitor de Texto?';
+    title.textContent = this.i18n.t('donation.title');
 
     const description = this.deps.document.createElement('p');
     description.className = 'text-sm text-primary opacity-90';
-    description.textContent = 'Se este projeto foi útil para você, considere fazer uma doação para apoiar o desenvolvimento contínuo.';
+    description.textContent = this.i18n.t('donation.description');
 
     const buttonContainer = this.deps.document.createElement('div');
     buttonContainer.className = 'flex justify-center pt-2';
     const closeButton2 = this.deps.document.createElement('button');
     closeButton2.setAttribute('data-close-donation', 'true');
     closeButton2.className = 'btn-shine inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-white/20 backdrop-blur-sm font-semibold border border-white/30 shadow-lg hover:bg-white/30 hover:shadow-xl transition-all duration-200 text-primary';
-    closeButton2.textContent = 'Talvez Depois';
+    closeButton2.textContent = this.i18n.t('donation.maybeLater');
     buttonContainer.appendChild(closeButton2);
 
     content.appendChild(heartIcon);
@@ -398,7 +403,7 @@ export class TextReaderApp {
         const loadQr = () => {
           const qrImg = this.deps.document.createElement('img');
           qrImg.src = '/assets/qr-code.svg';
-          qrImg.alt = 'QR Code para doações via PIX';
+          qrImg.alt = this.i18n.t('donation.qrAlt');
           qrImg.loading = 'lazy';
           qrImg.decoding = 'async';
           qrImg.width = 192;
@@ -480,8 +485,9 @@ export class TextReaderApp {
   }
 }
 
-export function bootstrap(): TextReaderApp {
-  const app = new TextReaderApp({ window, document });
+export function bootstrap(i18n?: I18n): TextReaderApp {
+  const translations = i18n ?? new I18n(detectLocale({ navigator: window.navigator, Intl }));
+  const app = new TextReaderApp({ window, document, i18n: translations });
   app.init();
   return app;
 }

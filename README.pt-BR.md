@@ -10,6 +10,7 @@ Um aplicativo web moderno e responsivo que converte texto em fala, permitindo qu
 - **Persistência de Dados**: Salve o texto no navegador para acessá-lo depois
 - **Parada e Reprodução**: Controle total sobre a reprodução com botões intuitivos
 - **Suporte a Português Brasileiro**: Detecção automática e seleção de vozes pt-BR quando disponível
+- **Internacionalização**: Interface em pt-BR para acessos do Brasil e em inglês para demais regiões, mantendo URL canônica e metadados de SEO intactos
 - **Design Responsivo**: Funciona perfeitamente em desktop, tablet e dispositivos móveis, usando layout em tela cheia e espaça
   mentos otimizados em telas pequenas para facilitar a leitura
 
