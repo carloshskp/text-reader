@@ -59,6 +59,25 @@ This project uses modern build tools and development dependencies. For end users
 - **Jest**: Unit testing framework
 - **Playwright**: End-to-end testing framework
 
+## 🧠 Speech Synthesis Architecture
+
+- The app now uses an engine abstraction (`SpeechEngine`) to decouple UI controls from speech implementation details.
+- The current default engine is `NativeSpeechEngine` (`window.speechSynthesis`) with standardized status mapping (`started`, `paused`, `stopped`, `queued`) used by the UI.
+- A `RttsSpeechEngine` adapter was added to support migration to `useSpeech` from `react-text-to-speech` without changing UI contracts.
+- `UnsupportedSpeechEngine` prevents invalid calls when speech synthesis is unavailable and keeps the interface stable.
+
+## 🛡️ Browser Compatibility and Limits
+
+- If Web Speech is not available, playback actions are blocked and the app shows an error toast instead of failing silently.
+- Voice/language selection still prefers the active i18n locale and falls back safely when no exact voice match exists.
+- Browser differences in speech queueing and pause/resume behavior may still exist because all engines ultimately depend on Web Speech support.
+
+## ✅ Coverage-Gated Migration Strategy (>=95%)
+
+- Migration to `useSpeech` follows a coverage gate: impacted modules must stay at or above 95% unit coverage before engine swapping.
+- The Jest configuration now enforces coverage thresholds for the speech engine modules (`src/speech/*`).
+- New speech contract tests validate initialization, play/pause flow, rate persistence, i18n language handoff, and unsupported-speech fallback.
+
 ## 📈 Analytics & Privacy
 
 - Google Analytics (GA4) and Google Tag Manager are now opt-in and only load after the visitor accepts telemetry via the in-app "Ativar métricas" control. The preference is stored in `localStorage`.

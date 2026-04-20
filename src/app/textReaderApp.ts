@@ -1,4 +1,6 @@
 import { clampRate, formatRateLabel } from '../core/rate.js';
+import { createSpeechEngine } from '../speech/createSpeechEngine.js';
+import { SpeechEngine, SpeechStatus } from '../speech/speechEngine.js';
 import { I18n, detectLocale } from '../utils/i18n.js';
 import { readFromStorage, writeToStorage } from '../utils/storage.js';
 
@@ -9,10 +11,11 @@ export interface AppDependencies {
   window: Window;
   document: Document;
   i18n: I18n;
+  speechEngine?: SpeechEngine;
 }
 
 export class TextReaderApp {
-  private readonly synth: SpeechSynthesis;
+  private readonly speechEngine: SpeechEngine;
   private readonly textArea: HTMLTextAreaElement;
   private readonly playButton: HTMLButtonElement;
   private readonly stopButton: HTMLButtonElement;
@@ -27,14 +30,11 @@ export class TextReaderApp {
 
   private readonly i18n: I18n;
 
-  private isPlaying = false;
-  private currentUtterance: SpeechSynthesisUtterance | null = null;
-  private cachedVoices: SpeechSynthesisVoice[] = [];
+  private status: SpeechStatus = 'stopped';
 
   constructor(private readonly deps: AppDependencies) {
     const { window, document, i18n } = deps;
     this.i18n = i18n;
-    this.synth = window.speechSynthesis;
 
     this.textArea = document.getElementById('text') as HTMLTextAreaElement;
     this.playButton = document.getElementById('btnPlay') as HTMLButtonElement;
@@ -57,15 +57,27 @@ export class TextReaderApp {
         this.pageLoaded = true;
       });
     }
+
+    this.speechEngine = deps.speechEngine ?? createSpeechEngine({
+      window,
+      document,
+      language: this.resolveSpeechLanguage(),
+      rate: clampRate(this.rateSlider.value),
+      onError: () => this.handleSpeechError(),
+      onStatusChange: (status) => this.handleSpeechStatusChange(status)
+    });
   }
 
   init(): void {
     this.restoreState();
-    this.cacheVoices();
-    this.synth.onvoiceschanged = () => this.cacheVoices();
+    this.speechEngine.setRate(clampRate(this.rateSlider.value));
+    this.speechEngine.setLanguage(this.resolveSpeechLanguage());
     this.attachEventListeners();
     this.handleResponsiveControls();
     this.attachDonationTriggers();
+    if (!this.speechEngine.available) {
+      this.toast(this.i18n.t('toast.error'));
+    }
     this.updateActionButtons();
   }
 
@@ -82,42 +94,6 @@ export class TextReaderApp {
     } else {
       this.syncRateControls(this.rateSlider.value, { persist: false, source: 'slider' });
     }
-  }
-
-  private cacheVoices(): void {
-    const voices = this.synth.getVoices();
-    if (voices && voices.length) {
-      this.cachedVoices = voices;
-    }
-  }
-
-  private pickVoice(): SpeechSynthesisVoice | null {
-    if (!this.cachedVoices.length) return null;
-    return this.cachedVoices.find((voice) => /pt-BR/i.test(voice.lang))
-      || this.cachedVoices.find((voice) => /^pt/i.test(voice.lang))
-      || null;
-  }
-
-  private createUtterance(text: string, rate: string | number): SpeechSynthesisUtterance {
-    const speechCtor = (
-      this.deps.window as typeof window & { SpeechSynthesisUtterance?: typeof SpeechSynthesisUtterance }
-    ).SpeechSynthesisUtterance ?? SpeechSynthesisUtterance;
-
-    const utterance = new speechCtor(text);
-    const voice = this.pickVoice();
-
-    if (voice) {
-      utterance.voice = voice;
-      utterance.lang = voice.lang;
-    } else {
-      utterance.lang = 'pt-BR';
-    }
-
-    utterance.rate = clampRate(rate);
-    utterance.pitch = 1.0;
-    utterance.volume = 1.0;
-
-    return utterance;
   }
 
   private attachEventListeners(): void {
@@ -167,27 +143,25 @@ export class TextReaderApp {
   }
 
   private handlePlay(): void {
+    if (!this.speechEngine.available) {
+      this.toast(this.i18n.t('toast.error'));
+      return;
+    }
+
     const text = this.textArea.value.trim();
     if (!text) {
       this.toast(this.i18n.t('toast.empty'));
       return;
     }
 
-    if (this.synth.speaking || this.synth.pending) {
-      this.synth.cancel();
-    }
-
-    this.speakText(text);
+    this.speechEngine.start(text);
+    this.updateButtonsState(true);
   }
 
   private handleStop(): void {
-    if (this.synth.speaking) {
-      this.synth.pause();
-      this.updateButtonsState(false);
-    } else if (this.synth.paused) {
-      this.synth.resume();
-      this.updateButtonsState(true);
-    }
+    this.speechEngine.pause();
+    const status = this.speechEngine.getStatus();
+    this.updateButtonsState(status === 'started');
   }
 
   private handleClear(): void {
@@ -210,38 +184,8 @@ export class TextReaderApp {
     this.updateActionButtons();
   }
 
-  private speakText(text: string): void {
-    this.currentUtterance = this.createUtterance(text, this.rateSlider.value);
-    this.synth.speak(this.currentUtterance);
-
-    this.deps.window.setTimeout(() => {
-      if (this.synth.speaking) {
-        this.updateButtonsState(true);
-      }
-    }, 100);
-
-      this.currentUtterance.onend = () => {
-        this.updateButtonsState(false);
-        this.currentUtterance = null;
-        // Só mostrar modal após página estar carregada
-        if (this.pageLoaded) {
-          this.deps.window.setTimeout(() => this.showDonationModal(), 500);
-        } else {
-          this.deps.window.addEventListener('load', () => {
-            this.deps.window.setTimeout(() => this.showDonationModal(), 500);
-          }, { once: true });
-        }
-      };
-
-    this.currentUtterance.onerror = () => {
-      this.updateButtonsState(false);
-      this.currentUtterance = null;
-      this.toast(this.i18n.t('toast.error'));
-    };
-  }
-
   private updateButtonsState(playing: boolean): void {
-    this.isPlaying = playing;
+    this.status = playing ? 'started' : 'stopped';
     this.playButton.disabled = playing;
     this.stopButton.disabled = !playing;
 
@@ -255,7 +199,7 @@ export class TextReaderApp {
   }
 
   private updateActionButtons(): void {
-    this.updateButtonsState(this.isPlaying);
+    this.updateButtonsState(this.status === 'started');
   }
 
   private syncRateControls(value: string | number, options: { persist?: boolean; source?: 'slider' | 'select' } = {}): number {
@@ -277,19 +221,7 @@ export class TextReaderApp {
       writeToStorage(RATE_KEY, normalizedString, this.deps.window.localStorage);
     }
 
-    if (this.currentUtterance && (this.synth.speaking || this.synth.paused)) {
-      if (this.synth.paused) {
-        this.currentUtterance.rate = normalized;
-      } else {
-        const text = this.textArea.value.trim();
-        if (text) {
-          this.synth.cancel();
-          this.currentUtterance = this.createUtterance(text, normalized);
-          this.synth.speak(this.currentUtterance);
-          this.updateButtonsState(true);
-        }
-      }
-    }
+    this.speechEngine.setRate(normalized);
 
     return normalized;
   }
@@ -482,6 +414,30 @@ export class TextReaderApp {
       element.classList.add('opacity-0', 'transition-all', 'duration-300');
       this.deps.window.setTimeout(() => host.removeChild(element), 300);
     }, 2000);
+  }
+
+  private resolveSpeechLanguage(): string {
+    return this.i18n.locale;
+  }
+
+  private handleSpeechError(): void {
+    this.updateButtonsState(false);
+    this.toast(this.i18n.t('toast.error'));
+  }
+
+  private handleSpeechStatusChange(status: SpeechStatus): void {
+    this.status = status;
+    this.updateButtonsState(status === 'started');
+
+    if (status === 'stopped') {
+      if (this.pageLoaded) {
+        this.deps.window.setTimeout(() => this.showDonationModal(), 500);
+      } else {
+        this.deps.window.addEventListener('load', () => {
+          this.deps.window.setTimeout(() => this.showDonationModal(), 500);
+        }, { once: true });
+      }
+    }
   }
 }
 
