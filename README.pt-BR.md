@@ -58,6 +58,25 @@ Este projeto utiliza ferramentas modernas de build e dependências de desenvolvi
 - **Jest**: Framework de testes unitários
 - **Playwright**: Framework de testes end-to-end
 
+## 🧠 Arquitetura de síntese de voz
+
+- A aplicação agora usa uma abstração de engine (`SpeechEngine`) para desacoplar a UI dos detalhes da implementação de fala.
+- A engine padrão atual é a `NativeSpeechEngine` (`window.speechSynthesis`), com estados normalizados (`started`, `paused`, `stopped`, `queued`) consumidos pela interface.
+- Foi adicionada uma adapter `RttsSpeechEngine` para viabilizar a migração para `useSpeech` (`react-text-to-speech`) sem quebrar os contratos da UI.
+- A `UnsupportedSpeechEngine` evita chamadas inválidas quando não há suporte de síntese no navegador, mantendo a aplicação estável.
+
+## 🛡️ Compatibilidade e limitações
+
+- Se a Web Speech API não estiver disponível, os comandos de reprodução são bloqueados e a aplicação exibe feedback de erro.
+- A seleção de idioma/voz continua priorizando o locale ativo do i18n, com fallback seguro para vozes disponíveis.
+- Diferenças entre navegadores em fila e pausa/retomada ainda podem ocorrer por limitações da própria Web Speech API.
+
+## ✅ Estratégia de migração orientada por cobertura (>=95%)
+
+- A migração para `useSpeech` segue gate de qualidade: módulos impactados devem manter cobertura unitária igual ou superior a 95%.
+- A configuração do Jest agora aplica threshold para os módulos de engine de fala (`src/speech/*`).
+- Novos testes de contrato cobrem inicialização, fluxo play/pause, persistência de velocidade, idioma via i18n e fallback sem suporte a fala.
+
 ## 📈 Métricas e privacidade
 
 - O Google Analytics (GA4) e o Google Tag Manager agora são opt-in e só carregam após o visitante aceitar a coleta de métricas pelo controle "Ativar métricas" na interface. A preferência fica salva no `localStorage`.

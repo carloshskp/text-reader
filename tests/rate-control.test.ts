@@ -1,5 +1,6 @@
 import { TextReaderApp } from '../src/app/textReaderApp.js';
 import { clampRate, formatRateLabel } from '../src/core/rate.js';
+import { SpeechEngine, SpeechStatus } from '../src/speech/speechEngine.js';
 import { I18n } from '../src/utils/i18n.js';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -18,6 +19,36 @@ const sanitizedHtml = rawHtml.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '');
 interface DomOptions {
   matches?: boolean;
   initialRate?: string;
+}
+
+class MockSpeechEngine implements SpeechEngine {
+  available = true;
+  status: SpeechStatus = 'stopped';
+  rate = 1;
+
+  start(): void {
+    this.status = 'started';
+  }
+
+  pause(): void {
+    this.status = this.status === 'started' ? 'paused' : 'started';
+  }
+
+  stop(): void {
+    this.status = 'stopped';
+  }
+
+  setRate(rate: number): void {
+    this.rate = rate;
+  }
+
+  setLanguage(): void {}
+
+  getStatus(): SpeechStatus {
+    return this.status;
+  }
+
+  destroy(): void {}
 }
 
 async function createDom({ matches = false, initialRate }: DomOptions = {}) {
@@ -117,7 +148,12 @@ async function createDom({ matches = false, initialRate }: DomOptions = {}) {
   });
 
   const i18n = new I18n('pt-BR');
-  const app = new TextReaderApp({ window: dom.window as unknown as Window, document: dom.window.document, i18n });
+  const app = new TextReaderApp({
+    window: dom.window as unknown as Window,
+    document: dom.window.document,
+    i18n,
+    speechEngine: new MockSpeechEngine()
+  });
   app.init();
   await new Promise((resolve) => dom.window.requestAnimationFrame(() => resolve(null)));
 
